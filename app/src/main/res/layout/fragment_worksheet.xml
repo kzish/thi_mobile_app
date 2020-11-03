@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:fillViewport="true">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_content"
+            android:layout_marginTop="30dip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_dim"
+                    android:padding="10dp"
+                    tools:context="zw.co.qbit.thi.AddWorkSheetActivity"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp">
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="WORK SHEET"
+                                android:fontFamily="@font/muli_bold"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Growers name"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Land"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Hectares"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="SubDiv"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+                        </TableRow>
+
+
+                        <TableRow>
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_grower_name"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_land_name"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_hectares"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:text="8"
+                                android:textSize="8sp" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_sub_div"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:editable="false"
+                                android:enabled="false"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:inputType="numberDecimal"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+                        </TableRow>
+
+
+                        <TableRow android:layout_marginTop="70dp">
+
+                            <TextView
+
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="UNDAMAGED"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="MISSING\nSTAND"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="BROKEN\nAT BASE"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="BROKEN\n1/2 WAY"
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="40dp">
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_undamaged_1"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                app:bootstrapBrand="warning"
+                                app:roundedCorners="true" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_missing_1"
+                                app:roundedCorners="true"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_base_1"
+                                android:layout_width="0dp"
+                                app:roundedCorners="true"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_half_way_1"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                app:roundedCorners="true"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_undamaged_2"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                app:roundedCorners="true"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_missing_2"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_base_2"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_half_way_2"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+
+                        <TableRow>
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_undamaged_3"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="numberDecimal"
+                                app:roundedCorners="true"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_missing_3"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_base_3"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_half_way_3"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                        </TableRow>
+
+
+                        <TableRow>
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_undamaged_4"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_missing_4"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_base_4"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_broken_half_way_4"
+                                android:layout_width="0dp"
+                                android:layout_height="50dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="0"
+                                app:roundedCorners="true"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                        </TableRow>
+
+
+                        <TableRow
+                            android:weightSum="4"
+                            android:layout_marginTop="10dip">
+
+                            <TextView
+                                android:id="@+id/lbl_undamaged_total"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="..."
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/lbl_missing_total"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="..."
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/lbl_broken_at_base_total"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="..."
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/lbl_broken_half_way_total"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="..."
+                                android:textColor="#000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="8sp" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Remarks"
+                                android:fontFamily="@font/muli_bold"
+                                android:textColor="#000"
+                                android:textSize="8sp"
+                                android:textStyle="italic|bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <com.beardedhen.androidbootstrap.BootstrapEditText
+                                android:id="@+id/txt_remarks"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left|top"
+                                android:layout_height="57dip"
+                                android:hint="remarks..."
+                                android:fontFamily="@font/muli_semibold_local"
+                                android:inputType="textMultiLine"
+                                android:textColor="#000"
+                                app:roundedCorners="true"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

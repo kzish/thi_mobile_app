@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/ic_save_black_24dp"
+        android:id="@+id/action_save"
+        android:title="save"/>
+
+
+    <item
+        android:id="@+id/menu_view_grid"
+        android:fontFamily="@font/muli_bold"
+        android:title="view grid sheet"/>
+
+    <item
+        android:id="@+id/menu_clear"
+        android:fontFamily="@font/muli_bold"
+        android:title="clear grid sheet"/>
+
+
+    <item
+        android:id="@+id/menu_delete"
+        android:fontFamily="@font/muli_bold"
+        android:title="delete grid sheet"/>
+
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_edit"
+        android:fontFamily="@font/muli_bold"
+        android:title="open inspection"/>
+
+
+
+
+    <item
+        android:id="@+id/menu_add_images"
+        android:fontFamily="@font/muli_bold"
+        android:title="add images"/>
+
+
+    <item
+        android:id="@+id/menu_mark_boundary"
+        android:fontFamily="@font/muli_bold"
+        android:title="mark boundary"/>
+
+
+    <item
+        android:icon="@drawable/ic_plant"
+        android:id="@+id/menu_upload"
+        android:fontFamily="@font/muli_bold"
+        android:title="submit inspection"/>
+
+
+
+</menu>

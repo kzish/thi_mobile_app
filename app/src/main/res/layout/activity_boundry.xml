@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    tools:context="zw.co.qbit.thi.BoundryActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            tools:context="zw.co.qbit.thi.BoundryActivity">
+
+            <TextView
+                android:id="@+id/txtlandname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2sp"
+                android:fontFamily="@font/muli"
+                android:text="land name"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="Marking boundary for"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/relmap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000"
+            tools:context="zw.co.qbit.thi.BoundryActivity">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MapsActivity" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relbot"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            tools:context="zw.co.qbit.thi.BoundryActivity">
+
+            <ListView
+                android:id="@+id/listcoords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/muli"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#eee" />
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnsavecoord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnsaveboundary"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/muli_semibold_local"
+            android:onClick="setCoordinate"
+            android:text="Mark Coordinate" />
+
+        <Button
+            android:id="@+id/btnsaveboundary"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/muli_semibold_local"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="saveBoundary"
+            android:text="Save Boundary" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

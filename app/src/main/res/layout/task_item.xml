@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="1"
+            >
+
+            <TextView
+                android:id="@+id/txt_grower_name"
+                android:text="name"
+                android:fontFamily="@font/muli_bold"
+                android:paddingLeft="10dip"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:textColor="#000"
+                android:textSize="10dip"
+                android:textStyle="italic|bold" />
+        </TableRow>
+
+        <TableRow android:weightSum="1">
+
+            <ImageView
+                android:layout_width="90dip"
+                android:layout_height="100dip"
+                android:padding="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_document" />
+        </TableRow>
+
+        <TableRow android:weightSum="1"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+            <com.beardedhen.androidbootstrap.BootstrapProgressBar
+                android:layout_width="0dip"
+                android:id="@+id/progress_bar"
+                android:layout_weight="0.7"
+                android:scaleY="0.2"
+                android:layout_height="wrap_content"
+                app:animated="true"
+                app:bootstrapBrand="warning"
+                app:striped="true"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center|center_horizontal|center_vertical"
+                />
+
+            <TextView
+                android:textColor="#000"
+                android:text="85%"
+                android:layout_weight="0.3"
+                android:layout_width="0dip"
+                android:padding="5dip"
+                android:fontFamily="@font/muli_bold"
+                android:textSize="7dip"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:id="@+id/txt_percentage"
+
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

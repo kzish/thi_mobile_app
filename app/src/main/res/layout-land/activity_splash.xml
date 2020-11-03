@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="1">
+
+    <LinearLayout android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:background="#192832">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/tobacco">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/year_land"
+                android:textColor="#fff"
+                android:textSize="60dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt1"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Agricultural Season"
+                android:textColor="#fff"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/logo"></ImageView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:background="#193222">
+        <TableLayout
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:padding="10dip">
+
+
+            <TableRow android:weightSum="1">
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="120dip"
+                    android:padding="20dip"
+                    />
+            </TableRow>
+
+
+            <TableRow android:weightSum="1">
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/txt_username"
+                    android:layout_width="0dip"
+                    android:layout_height="57dip"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="username..."
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    app:bootstrapBrand="warning"
+                    app:roundedCorners="false" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dip"
+                android:weightSum="1">
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/txt_password"
+                    android:layout_width="0dip"
+                    android:layout_height="57dip"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="password..."
+                    android:inputType="textPassword"
+                    android:padding="10dip"
+                    app:bootstrapBrand="warning"
+                    app:roundedCorners="false" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_marginTop="5dip"
+                android:weightSum="1">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="0dip"
+                    android:layout_height="57dip"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="username..."
+                    android:onClick="_login"
+                    android:padding="10dip"
+                    android:text="Login"
+                    app:bootstrapBrand="warning"
+                    app:roundedCorners="false" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Powered by Centric Data in Association with ZIMNAT"
+                    android:textColor="#000"
+                    android:textSize="10dip" />
+            </TableRow>
+
+
+        </TableLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

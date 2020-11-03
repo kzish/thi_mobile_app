@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/reltop"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/fade"
+            >
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:padding="30dp"
+                android:layout_height="wrap_content">
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="ROW-WIDTH"
+                        android:textColor="#000"
+                        android:fontFamily="@font/muli_bold"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="IN-ROW"
+                        android:textColor="#000"
+                        android:fontFamily="@font/muli_bold"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="HECTARES"
+                        android:fontFamily="@font/muli_bold"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="CROP-STAND"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+                </TableRow>
+
+
+
+
+                <TableRow>
+
+
+                    <EditText
+                        android:id="@+id/txt_row_width"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="meteres"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+                    <EditText
+                        android:id="@+id/txt_in_row"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="meteres"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+                    <EditText
+                        android:id="@+id/txt_hectares"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_crop_stand"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lbl_yield"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/muli_semibold_local"
+                        android:text="PLANT POPULATION: 0"
+                        android:textColor="#000"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="20dp">
+
+                </TableRow>
+
+
+                <TableRow android:layout_marginTop="4dp">
+
+                    <Button
+                        android:id="@+id/btnmarkland"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#e1f40f"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="mark boundary" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="20dp" android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_info"
+                        android:layout_width="0dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:fontFamily="@font/muli_semibold_local"
+                        android:text="LAND BOUNDARY: NOT SYNCED TO SERVER"
+                        android:textColor="#000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/img_status"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="-50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_delete_" />
+                </TableRow>
+
+
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapviewPremises"
+            android:name="org.osmdroid.views.MapView"
+            tilesource="Mapnik"
+            android:layout_width="0dip"
+            android:layout_height="200dp"
+            android:layout_margin="0.1dip"
+            android:layout_weight="4.25"
+            android:clickable="true" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+

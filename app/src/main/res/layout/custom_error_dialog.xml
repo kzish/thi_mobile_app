@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <TableRow
+            android:background="@color/colorPrimary"
+            android:padding="2dip"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_weight="0.2"
+
+                android:src="@drawable/ic_error_ico" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/muli_bold"
+                android:text="an error occurred..."
+                android:textColor="#fff"
+                android:textSize="19dip"
+                android:textStyle="bold"
+
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="#fff"
+            android:padding="5dip"
+            android:weightSum="1">
+
+            <TextView
+                android:padding="30dip"
+                android:id="@+id/txt_msg"
+                android:layout_width="0dip"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="saint"
+                android:fontFamily="@font/muli_semibold_local"
+                android:textSize="17dip"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="50dip"
+            android:padding="5dip"
+            android:background="#fff"
+            android:weightSum="1">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_close"
+                android:layout_height="15dp"
+                android:height="30dip"
+                android:background="#fff"
+                android:fontFamily="@font/muli_semibold_local"
+                android:text="close"
+                android:textColor="#fff"
+                app:bootstrapBrand="warning"
+                app:buttonMode="regular"
+                app:roundedCorners="true" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

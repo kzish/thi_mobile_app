@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow
+            android:background="@color/colorPrimary"
+            android:padding="2dip"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_weight="0.2"
+                android:src="@drawable/ic_warning_ico" />
+
+            <TextView
+
+                android:layout_width="0dip"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="0.8"
+                android:text="warning..."
+                android:fontFamily="@font/muli_bold"
+                android:textColor="#fff"
+                android:textSize="19dip"
+                android:textStyle="bold"
+
+                />
+        </TableRow>
+
+        <TableRow android:padding="5dip" android:weightSum="1" android:background="#fff">
+            <TextView
+                android:padding="30dip"
+                android:id="@+id/txt_msg"
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:textSize="17dip"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal|center_vertical"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="50dip"
+            android:padding="5dip"
+            android:background="#fff"
+            android:weightSum="1">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_close"
+                app:roundedCorners="true"
+                app:bootstrapBrand="warning"
+                android:fontFamily="@font/muli_semibold_local"
+                android:text="close"
+                android:height="30dip"
+                android:textColor="#fff" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

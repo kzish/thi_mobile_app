@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: com.chootdev:timezago:1.1.7@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle1/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle1/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle1/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cebcf94295b4d291f0e6f52aeba47dfc/timezago-1.1.7/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle1/caches/modules-2/files-2.1/com.chootdev/timezago/1.1.7/bc26435f1676f94d288235305cac45ccb0a77fab/timezago-1.1.7-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.chootdev/timezago/1.1.7/bc26435f1676f94d288235305cac45ccb0a77fab/timezago-1.1.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle1/caches/modules-2/files-2.1/com.chootdev/timezago/1.1.7/19bee3ebe1cf903c37e5dbf0081d10a341b924e9/timezago-1.1.7-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.chootdev/timezago/1.1.7/19bee3ebe1cf903c37e5dbf0081d10a341b924e9/timezago-1.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

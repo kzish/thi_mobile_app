@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f4b73e</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#f4b73e</color>
+
+    <color name="Bwarning1">#ffa9ee</color>
+    <color name="Bwarning">#e602b8</color>
+
+    <color name="Bprimary">#656ff5</color>
+    <color name="Bprimary1">#095585</color>
+
+
+
+    <color name="Bsuccess">#5bff22</color>
+    <color name="Bsuccess1">#288209</color>
+
+    <color name="Binfo">#65f3f5</color>
+    <color name="Binfo1">#028de6</color>
+
+
+
+
+</resources>
