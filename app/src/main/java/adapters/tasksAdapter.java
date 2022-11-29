@@ -4,20 +4,18 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.widget.PopupMenu;
+import androidx.appcompat.widget.PopupMenu;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.BootstrapProgressBar;
 
 import java.util.List;
-import java.util.jar.Attributes;
 
 import attachments.AttachmentsActivity;
 import models.tbl_task_model;
@@ -26,8 +24,6 @@ import zw.co.qbit.thi_app.HomeActivity;
 import zw.co.qbit.thi_app.MarkLandsActivity;
 import zw.co.qbit.thi_app.R;
 import zw.co.qbit.thi_app.SubDivisionIndex;
-import zw.co.qbit.thi_app.TabActivity;
-import zw.co.qbit.thi_app.thi;
 
 /**
  * Created by soyuz on 12/24/2017.

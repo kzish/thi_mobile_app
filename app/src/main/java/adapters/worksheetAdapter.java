@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.widget.PopupMenu;
-import android.util.Log;
+import androidx.appcompat.widget.PopupMenu;
+
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;

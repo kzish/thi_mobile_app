@@ -18,7 +18,7 @@
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_audiotrack_light" />
+                android:src="@drawable/ic_account_circle_black_24dp" />
 
             <TextView
                 android:id="@+id/txt_filename"

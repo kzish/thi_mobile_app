@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: ./app/libs/smack.jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/smack.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

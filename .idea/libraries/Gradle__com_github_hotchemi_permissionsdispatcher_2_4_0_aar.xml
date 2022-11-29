@@ -5,8 +5,9 @@
       <root url="jar://$USER_HOME$/.gradle1/caches/transforms-2/files-2.1/be5346f3b90026928f2e45ab8e06e000/permissionsdispatcher-2.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle1/caches/transforms-2/files-2.1/be5346f3b90026928f2e45ab8e06e000/permissionsdispatcher-2.4.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be5346f3b90026928f2e45ab8e06e000/permissionsdispatcher-2.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be5346f3b90026928f2e45ab8e06e000/permissionsdispatcher-2.4.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be5346f3b90026928f2e45ab8e06e000/permissionsdispatcher-2.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff9db5af01e9ea3a2530a58d16471a8f/jetified-permissionsdispatcher-2.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff9db5af01e9ea3a2530a58d16471a8f/jetified-permissionsdispatcher-2.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff9db5af01e9ea3a2530a58d16471a8f/jetified-permissionsdispatcher-2.4.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle1/caches/modules-2/files-2.1/com.github.hotchemi/permissionsdispatcher/2.4.0/2a8e242b5303935b9b46f0df804947220bd2d2a9/permissionsdispatcher-2.4.0-javadoc.jar!/" />

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thi_mod.iml" filepath="$PROJECT_DIR$/.idea/modules/thi_mod.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/thi_mod.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/thi_mod.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thi_mobile_app.iml" filepath="$PROJECT_DIR$/.idea/modules/thi_mobile_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/thi_mobile_app.app.unitTest.iml" />
     </modules>
   </component>
 </project>

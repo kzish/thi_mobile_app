@@ -1,14 +1,12 @@
 package adapters;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.PopupMenu;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.PopupMenu;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -18,14 +16,10 @@ import android.webkit.MimeTypeMap;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 import daoModels.tbl_attachmentsDao;
-import droidninja.filepicker.FilePickerBuilder;
 import models.tbl_attachments;
 import zw.co.qbit.thi_app.R;
 import zw.co.qbit.thi_app.thi;

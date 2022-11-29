@@ -2,11 +2,8 @@ package zw.co.qbit.thi_app;
 import android.app.Application;
 import android.content.Context;
 
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-
 import android.database.sqlite.SQLiteDatabase;
-import android.support.multidex.MultiDex;
+import androidx.multidex.MultiDex;
 
 import daoModels.DaoMaster;
 import daoModels.DaoSession;

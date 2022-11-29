@@ -1,6 +1,6 @@
 package zw.co.qbit.thi_app;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MarkLandsActivity extends AppCompatActivity {

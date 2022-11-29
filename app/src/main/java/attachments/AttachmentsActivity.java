@@ -4,16 +4,14 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import net.alhazmy13.mediapicker.Video.VideoPicker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +22,6 @@ import droidninja.filepicker.FilePickerConst;
 import models.tbl_attachments;
 import zw.co.qbit.thi_app.R;
 import zw.co.qbit.thi_app.thi;
-
-import static net.alhazmy13.mediapicker.Video.VideoPicker.EXTRA_VIDEO_PATH;
 
 public class AttachmentsActivity extends AppCompatActivity {
     static ListView list_pics;
