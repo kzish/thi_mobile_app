@@ -1764,7 +1764,7 @@ public class tab2Fragment extends Fragment {
 
             Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_SHORT);
             View sbView = snackbar.getView();
-            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            TextView textView = (TextView) sbView.findViewById(R.id.snackbar_text);
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {

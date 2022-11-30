@@ -25,13 +25,8 @@ import java.util.UUID;
  */
 
 public class globals {
-    //public static String server_ip="zishumba-001-site4.ftempurl.com";//online
-   //public static String server_ip="172.16.1.57";//thi
-   public static String server_ip="167.86.73.213";//home
-    //http://zishumba-001-site4.ftempurl.com/mobileapi/
-    public static String xmpp_server="CENTRICSQL1";
-    public static String server_url="http://"+server_ip+"/thi";//local
-    //public static String server_url="http://"+server_ip;//online
+//    public static String server_url="http://167.86.73.213/thi";//online
+    public static String server_url="http://192.168.100.150:56744";//local centric data main
 
     public static int getLineNumber() {
         return Thread.currentThread().getStackTrace()[2].getLineNumber();

@@ -3,7 +3,9 @@ package syncPackages;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
@@ -47,6 +49,8 @@ import zw.co.qbit.thi_app.thi;
 import static zw.co.qbit.thi_app.HomeActivity.loadAllTasks;
 import static zw.co.qbit.thi_app.SubDivisionIndex.refreshList;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by soyuz on 4/17/2017.
  */
@@ -62,6 +66,7 @@ public class syncUploadTask {
     boolean sigUploaded=false;
     boolean leavesUploaded=false;
     boolean gridheaderUploaded=false;
+    static String message = "";
 
     public static boolean sync(Context context , final tbl_task_model t)
     {
@@ -78,7 +83,11 @@ public class syncUploadTask {
 
                             if (response.equals("0")) {
                                 Log.e(tag,"response:............."+response);
-                               HomeActivity.ed.showCustomDialog(HomeActivity.activity,"Inspection Not Submitted...");
+                                if(!message.equals("")) {
+                                    HomeActivity.ed.showCustomDialog(HomeActivity.activity, message);
+                                } else{
+                                    HomeActivity.ed.showCustomDialog(HomeActivity.activity,"Inspection Not Submitted...");
+                                }
                             } else {
                                 String grower_id = t.grower_id;
                                 String land_id   = t.land_id;
@@ -149,10 +158,9 @@ public class syncUploadTask {
 
                     if(t.claim_stage!=100)
                     {
-                        HomeActivity.ed.showCustomDialog(HomeActivity.activity,"This form is not completed");
+                        message = "This inspection is not completed";
                         return null;
                     }
-
 
                     tbl_land_model land   = thi.daoSession.getTbl_land_modelDao()
                             .queryBuilder()
@@ -286,10 +294,18 @@ public class syncUploadTask {
                     params.put("worksheets"           , worksheets_);
                     params.put("leaves"               , leaves_);
                     params.put("gridheader"           , header_);
-                    params.put("grower_signature"     , globals.imageToString(sig_grower));
-                    params.put("inspector_signature"  , globals.imageToString(sig_1stinspector));
-                    params.put("inspector_signature2" , globals.imageToString(sig_2ndinspector));
-                    params.put("sub-division map" , globals.imageToString(draw_map));
+                    if(sig_grower != null) {
+                        params.put("grower_signature"     , globals.imageToString(sig_grower));
+                    }
+                    if(sig_1stinspector != null) {
+                        params.put("inspector_signature", globals.imageToString(sig_1stinspector));
+                    }
+                    if(sig_2ndinspector != null) {
+                        params.put("inspector_signature2", globals.imageToString(sig_2ndinspector));
+                    }
+                    if(draw_map != null) {
+                        params.put("sub-division map", globals.imageToString(draw_map));
+                    }
                     params.put("inspector2_name"      , sig.second_inspector_name);
                     return params;
                 };

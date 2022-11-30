@@ -243,72 +243,33 @@ public class SubDivisionIndex extends AppCompatActivity {
 
     }
 
-//    public void fillFarmAddress(){
-//        try {
-//          //  tbl_task_modelDao tdao = thi.daoSession.getTbl_task_modelDao()
-//
-//
-//
-//            List<tbl_task_model> mTasks = thi.daoSession.getTbl_task_modelDao()
-//                    .queryBuilder()
-//                    .where(
-//                            tbl_task_modelDao.Properties.Directions_to_farm.eq(mFarmAddress)
-//                    ).list();
-//
-//
-//            lands__ = new ArrayList<>();
-//
-//
-//         //   int loop = 0;
-//            for (tbl_task_model t : mTasks) {
-//                mFarmAddress.setText(t.directions_to_farm);
-//                landsObject gg = new landsObject();
-//                gg.land_id = t.land_id;
-//           //     gg.position = loop;
-//                lands__.add(gg);
-//           //     loop = loop +1;
-//            }
-//
-//
-//           // ArrayAdapter<String> adapter = new ArrayAdapter<String>(thi.CTX, R.layout.spinner_view_black, spinnerArray);
-//            //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-////            adapter.setDropDownViewResource(R.layout.spinner_view_black);
-////            spinnerGrowerLand.setAdapter(adapter);
-//        }
-////        try {
-////            //  tbl_task_modelDao tdao = thi.daoSession.getTbl_task_modelDao()
-////
-////            List<tbl_task_model> mTasks = thi.daoSession.getTbl_task_modelDao()
-////                    .queryBuilder()
-////                    .where(
-////                            tbl_task_modelDao.Properties.Grower_id.eq(mFarmAddress)
-////                    ).list();
-////
-////
-////            lands__ = new ArrayList<>();
-////
-////
-////            int loop = 0;
-////            for (tbl_task_model t : mTasks) {
-////                mFarmAddress.setText(t.land_name);
-////                landsObject gg = new landsObject();
-////                gg.land_id = t.land_id;
-////                gg.position = loop;
-////                lands__.add(gg);
-////                loop++;
-////            }
-////
-////
-////            // ArrayAdapter<String> adapter = new ArrayAdapter<String>(thi.CTX, R.layout.spinner_view_black, spinnerArray);
-////            //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//////            adapter.setDropDownViewResource(R.layout.spinner_view_black);
-//////            spinnerGrowerLand.setAdapter(adapter);
-////        }
-//
-//        catch (Exception ex) {
-//            Log.e(tag, "line 130.............." + ex);
-//        }
-//    }
+    public void fillFarmAddress(){
+        try {
+            tbl_task_modelDao tdao = thi.daoSession.getTbl_task_modelDao();
+            List<tbl_task_model> mTasks = thi.daoSession.getTbl_task_modelDao()
+                    .queryBuilder()
+                    .where(
+                            tbl_task_modelDao.Properties.Directions_to_farm.eq(mFarmAddress)
+                    ).list();
+            lands__ = new ArrayList<>();
+            int loop = 0;
+            for (tbl_task_model t : mTasks) {
+                mFarmAddress.setText(t.directions_to_farm);
+                landsObject gg = new landsObject();
+                gg.land_id = t.land_id;
+                gg.position = loop;
+                lands__.add(gg);
+                loop = loop +1;
+            }
+//            ArrayAdapter<String> adapter = new ArrayAdapter<String>(thi.CTX, R.layout.spinner_view_black, spinnerArray);
+//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//            adapter.setDropDownViewResource(R.layout.spinner_view_black);
+//            spinnerGrowerLand.setAdapter(adapter);
+        }
+        catch (Exception ex) {
+            Log.e(tag, "line 130.............." + ex);
+        }
+    }
 
     public void fillSpinnerGrowerLand() {
         try {
@@ -458,17 +419,21 @@ public class SubDivisionIndex extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
 
-            String land_id = getLandId();
-            String grower_id = activity.getIntent().getStringExtra("grower_id");
-            gh = thi.daoSession.getTbl_grid_header_modelDao()
-                    .queryBuilder()
-                    .where(
-                            tbl_grid_header_modelDao.Properties.Land_id.eq(land_id),
-                            tbl_grid_header_modelDao.Properties.Grower_id.eq(grower_id)
-                    )
-                    .unique();
+            try {
+                String land_id = getLandId();
+                String grower_id = activity.getIntent().getStringExtra("grower_id");
+                gh = thi.daoSession.getTbl_grid_header_modelDao()
+                        .queryBuilder()
+                        .where(
+                                tbl_grid_header_modelDao.Properties.Land_id.eq(land_id),
+                                tbl_grid_header_modelDao.Properties.Grower_id.eq(grower_id)
+                        )
+                        .unique();
+            }catch (Exception ex) {
+                Log.e("kz", ex.getMessage());
+            }
 
-            return null;
+            return "";
         }
     }
 
@@ -523,7 +488,7 @@ public class SubDivisionIndex extends AppCompatActivity {
             CoordinatorLayout rootlayout = (CoordinatorLayout) findViewById(R.id.main_content);
             Snackbar snackbar = Snackbar.make(rootlayout, message, Snackbar.LENGTH_SHORT);
             View sbView = snackbar.getView();
-            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            TextView textView = (TextView) sbView.findViewById(R.id.snackbar_text);
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         }catch (Exception ex)

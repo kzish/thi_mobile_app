@@ -23,7 +23,7 @@ import zw.co.qbit.thi_app.thi;
 public class DBHelper extends SQLiteOpenHelper {
 
 
-    private static final int DATABASE_VERSION = 30;
+    private static final int DATABASE_VERSION = 31;
     private static final String DATABASE_NAME = "thi";
     private static String TAG="DBHELPER";
 

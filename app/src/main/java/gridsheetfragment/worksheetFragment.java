@@ -499,7 +499,7 @@ public class worksheetFragment extends Fragment {
             RelativeLayout rootlayout = (RelativeLayout) view.findViewById(R.id.main_content);
             Snackbar snackbar = Snackbar.make(rootlayout, message, Snackbar.LENGTH_SHORT);
             View sbView = snackbar.getView();
-            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            TextView textView = (TextView) sbView.findViewById(R.id.snackbar_text);
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {

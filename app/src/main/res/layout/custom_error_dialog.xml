@@ -63,15 +63,14 @@
 
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/btn_close"
-                android:layout_height="15dp"
-                android:height="30dip"
-                android:background="#fff"
-                android:fontFamily="@font/muli_semibold_local"
+                android:background="@color/colorPrimary"
                 android:text="close"
-                android:textColor="#fff"
-                app:bootstrapBrand="warning"
+                android:height="30dip"
+                app:roundedCorners="true"
+                android:fontFamily="@font/muli_semibold_local"
                 app:buttonMode="regular"
-                app:roundedCorners="true" />
+                app:bootstrapBrand="warning"
+                android:textColor="#fff" />
         </TableRow>
 
     </TableLayout>
