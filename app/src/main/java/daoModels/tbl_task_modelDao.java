@@ -34,6 +34,7 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
         public final static Property Claim_stage = new Property(7, int.class, "claim_stage", false, "CLAIM_STAGE");
         public final static Property Claim_submitted = new Property(8, String.class, "claim_submitted", false, "CLAIM_SUBMITTED");
         public final static Property Directions_to_farm = new Property(9, String.class, "directions_to_farm", false, "DIRECTIONS_TO_FARM");
+        public final static Property Uploaded = new Property(10, int.class, "uploaded", false, "UPLOADED");
     }
 
 
@@ -58,7 +59,8 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
                 "\"LAND_NAME\" TEXT," + // 6: land_name
                 "\"CLAIM_STAGE\" INTEGER NOT NULL ," + // 7: claim_stage
                 "\"CLAIM_SUBMITTED\" TEXT," + // 8: claim_submitted
-                "\"DIRECTIONS_TO_FARM\" TEXT);"); // 9: directions_to_farm
+                "\"DIRECTIONS_TO_FARM\" TEXT," + // 9: directions_to_farm
+                "\"UPLOADED\" INTEGER NOT NULL );"); // 10: uploaded
     }
 
     /** Drops the underlying database table. */
@@ -116,6 +118,7 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
         if (directions_to_farm != null) {
             stmt.bindString(10, directions_to_farm);
         }
+        stmt.bindLong(11, entity.getUploaded());
     }
 
     @Override
@@ -167,6 +170,7 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
         if (directions_to_farm != null) {
             stmt.bindString(10, directions_to_farm);
         }
+        stmt.bindLong(11, entity.getUploaded());
     }
 
     @Override
@@ -186,7 +190,8 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
             cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6), // land_name
             cursor.getInt(offset + 7), // claim_stage
             cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8), // claim_submitted
-            cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9) // directions_to_farm
+            cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9), // directions_to_farm
+            cursor.getInt(offset + 10) // uploaded
         );
         return entity;
     }
@@ -203,6 +208,7 @@ public class tbl_task_modelDao extends AbstractDao<tbl_task_model, String> {
         entity.setClaim_stage(cursor.getInt(offset + 7));
         entity.setClaim_submitted(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
         entity.setDirections_to_farm(cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9));
+        entity.setUploaded(cursor.getInt(offset + 10));
      }
     
     @Override

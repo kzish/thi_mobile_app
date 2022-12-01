@@ -14,18 +14,17 @@ import org.greenrobot.greendao.annotation.Unique;
 @Entity
 public class tbl_leaf_model {
 
-
-
     @Id(autoincrement = true)
     public Long id;
     public int worksheet_id;//link this grid to the worksheet
     //@Index(unique = true)
     public int subdivision, grower_id, land_id, batch_id, plant_id, leaf_number;
     public String percentage_damage;
-    @Generated(hash = 1522627561)
+    public int uploaded;
+    @Generated(hash = 1495072564)
     public tbl_leaf_model(Long id, int worksheet_id, int subdivision, int grower_id,
             int land_id, int batch_id, int plant_id, int leaf_number,
-            String percentage_damage) {
+            String percentage_damage, int uploaded) {
         this.id = id;
         this.worksheet_id = worksheet_id;
         this.subdivision = subdivision;
@@ -35,6 +34,7 @@ public class tbl_leaf_model {
         this.plant_id = plant_id;
         this.leaf_number = leaf_number;
         this.percentage_damage = percentage_damage;
+        this.uploaded = uploaded;
     }
     @Generated(hash = 2043713932)
     public tbl_leaf_model() {
@@ -92,6 +92,12 @@ public class tbl_leaf_model {
     }
     public void setPercentage_damage(String percentage_damage) {
         this.percentage_damage = percentage_damage;
+    }
+    public int getUploaded() {
+        return this.uploaded;
+    }
+    public void setUploaded(int uploaded) {
+        this.uploaded = uploaded;
     }
 
 

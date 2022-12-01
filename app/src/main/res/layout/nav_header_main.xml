@@ -52,13 +52,13 @@
         android:id="@+id/txtbranch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/muli_semibold_local"
         android:layout_alignEnd="@+id/img_profile"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
         android:layout_marginLeft="2dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/muli_semibold_local"
         android:padding="4dip"
-        android:text="v1.0.0"
+        android:text="v2.0.0"
         android:textColor="#fff"
         android:textSize="12dp" />
 </RelativeLayout>

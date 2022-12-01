@@ -21,11 +21,12 @@ public class tbl_task_model {
             public int claim_stage ;
             public String claim_submitted;
             public String directions_to_farm;
-            @Generated(hash = 1066756771)
+            public int uploaded;
+            @Generated(hash = 1449418887)
             public tbl_task_model(String task_id, String grower_id, String grower_name,
-                    String land_area, String grower_number, String land_id,
-                    String land_name, int claim_stage, String claim_submitted,
-                    String directions_to_farm) {
+                    String land_area, String grower_number, String land_id, String land_name,
+                    int claim_stage, String claim_submitted, String directions_to_farm,
+                    int uploaded) {
                 this.task_id = task_id;
                 this.grower_id = grower_id;
                 this.grower_name = grower_name;
@@ -36,6 +37,7 @@ public class tbl_task_model {
                 this.claim_stage = claim_stage;
                 this.claim_submitted = claim_submitted;
                 this.directions_to_farm = directions_to_farm;
+                this.uploaded = uploaded;
             }
             @Generated(hash = 1921302978)
             public tbl_task_model() {
@@ -99,6 +101,12 @@ public class tbl_task_model {
             }
             public void setDirections_to_farm(String directions_to_farm) {
                 this.directions_to_farm = directions_to_farm;
+            }
+            public int getUploaded() {
+                return this.uploaded;
+            }
+            public void setUploaded(int uploaded) {
+                this.uploaded = uploaded;
             }
 
 

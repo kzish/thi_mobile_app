@@ -28,25 +28,26 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
         public final static Property Grower_id = new Property(1, int.class, "grower_id", false, "GROWER_ID");
         public final static Property Land_id = new Property(2, int.class, "land_id", false, "LAND_ID");
         public final static Property Sub_division = new Property(3, int.class, "sub_division", false, "SUB_DIVISION");
-        public final static Property Undamaged_1 = new Property(4, double.class, "undamaged_1", false, "UNDAMAGED_1");
-        public final static Property Undamaged_2 = new Property(5, double.class, "undamaged_2", false, "UNDAMAGED_2");
-        public final static Property Undamaged_3 = new Property(6, double.class, "undamaged_3", false, "UNDAMAGED_3");
-        public final static Property Undamaged_4 = new Property(7, double.class, "undamaged_4", false, "UNDAMAGED_4");
-        public final static Property Missing_stand_1 = new Property(8, double.class, "missing_stand_1", false, "MISSING_STAND_1");
-        public final static Property Missing_stand_2 = new Property(9, double.class, "missing_stand_2", false, "MISSING_STAND_2");
-        public final static Property Missing_stand_3 = new Property(10, double.class, "missing_stand_3", false, "MISSING_STAND_3");
-        public final static Property Missing_stand_4 = new Property(11, double.class, "missing_stand_4", false, "MISSING_STAND_4");
-        public final static Property Broken_at_base_1 = new Property(12, double.class, "broken_at_base_1", false, "BROKEN_AT_BASE_1");
-        public final static Property Broken_at_base_2 = new Property(13, double.class, "broken_at_base_2", false, "BROKEN_AT_BASE_2");
-        public final static Property Broken_at_base_3 = new Property(14, double.class, "broken_at_base_3", false, "BROKEN_AT_BASE_3");
-        public final static Property Broken_at_base_4 = new Property(15, double.class, "broken_at_base_4", false, "BROKEN_AT_BASE_4");
-        public final static Property Broken_half_way_1 = new Property(16, double.class, "broken_half_way_1", false, "BROKEN_HALF_WAY_1");
-        public final static Property Broken_half_way_2 = new Property(17, double.class, "broken_half_way_2", false, "BROKEN_HALF_WAY_2");
-        public final static Property Broken_half_way_3 = new Property(18, double.class, "broken_half_way_3", false, "BROKEN_HALF_WAY_3");
-        public final static Property Broken_half_way_4 = new Property(19, double.class, "broken_half_way_4", false, "BROKEN_HALF_WAY_4");
-        public final static Property Remarks = new Property(20, String.class, "remarks", false, "REMARKS");
-        public final static Property Hectars_represented_on_this_form = new Property(21, double.class, "hectars_represented_on_this_form", false, "HECTARS_REPRESENTED_ON_THIS_FORM");
-        public final static Property Hectares = new Property(22, double.class, "hectares", false, "HECTARES");
+        public final static Property Uploaded = new Property(4, int.class, "uploaded", false, "UPLOADED");
+        public final static Property Undamaged_1 = new Property(5, double.class, "undamaged_1", false, "UNDAMAGED_1");
+        public final static Property Undamaged_2 = new Property(6, double.class, "undamaged_2", false, "UNDAMAGED_2");
+        public final static Property Undamaged_3 = new Property(7, double.class, "undamaged_3", false, "UNDAMAGED_3");
+        public final static Property Undamaged_4 = new Property(8, double.class, "undamaged_4", false, "UNDAMAGED_4");
+        public final static Property Missing_stand_1 = new Property(9, double.class, "missing_stand_1", false, "MISSING_STAND_1");
+        public final static Property Missing_stand_2 = new Property(10, double.class, "missing_stand_2", false, "MISSING_STAND_2");
+        public final static Property Missing_stand_3 = new Property(11, double.class, "missing_stand_3", false, "MISSING_STAND_3");
+        public final static Property Missing_stand_4 = new Property(12, double.class, "missing_stand_4", false, "MISSING_STAND_4");
+        public final static Property Broken_at_base_1 = new Property(13, double.class, "broken_at_base_1", false, "BROKEN_AT_BASE_1");
+        public final static Property Broken_at_base_2 = new Property(14, double.class, "broken_at_base_2", false, "BROKEN_AT_BASE_2");
+        public final static Property Broken_at_base_3 = new Property(15, double.class, "broken_at_base_3", false, "BROKEN_AT_BASE_3");
+        public final static Property Broken_at_base_4 = new Property(16, double.class, "broken_at_base_4", false, "BROKEN_AT_BASE_4");
+        public final static Property Broken_half_way_1 = new Property(17, double.class, "broken_half_way_1", false, "BROKEN_HALF_WAY_1");
+        public final static Property Broken_half_way_2 = new Property(18, double.class, "broken_half_way_2", false, "BROKEN_HALF_WAY_2");
+        public final static Property Broken_half_way_3 = new Property(19, double.class, "broken_half_way_3", false, "BROKEN_HALF_WAY_3");
+        public final static Property Broken_half_way_4 = new Property(20, double.class, "broken_half_way_4", false, "BROKEN_HALF_WAY_4");
+        public final static Property Remarks = new Property(21, String.class, "remarks", false, "REMARKS");
+        public final static Property Hectars_represented_on_this_form = new Property(22, double.class, "hectars_represented_on_this_form", false, "HECTARS_REPRESENTED_ON_THIS_FORM");
+        public final static Property Hectares = new Property(23, double.class, "hectares", false, "HECTARES");
     }
 
 
@@ -66,25 +67,26 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
                 "\"GROWER_ID\" INTEGER NOT NULL ," + // 1: grower_id
                 "\"LAND_ID\" INTEGER NOT NULL ," + // 2: land_id
                 "\"SUB_DIVISION\" INTEGER NOT NULL ," + // 3: sub_division
-                "\"UNDAMAGED_1\" REAL NOT NULL ," + // 4: undamaged_1
-                "\"UNDAMAGED_2\" REAL NOT NULL ," + // 5: undamaged_2
-                "\"UNDAMAGED_3\" REAL NOT NULL ," + // 6: undamaged_3
-                "\"UNDAMAGED_4\" REAL NOT NULL ," + // 7: undamaged_4
-                "\"MISSING_STAND_1\" REAL NOT NULL ," + // 8: missing_stand_1
-                "\"MISSING_STAND_2\" REAL NOT NULL ," + // 9: missing_stand_2
-                "\"MISSING_STAND_3\" REAL NOT NULL ," + // 10: missing_stand_3
-                "\"MISSING_STAND_4\" REAL NOT NULL ," + // 11: missing_stand_4
-                "\"BROKEN_AT_BASE_1\" REAL NOT NULL ," + // 12: broken_at_base_1
-                "\"BROKEN_AT_BASE_2\" REAL NOT NULL ," + // 13: broken_at_base_2
-                "\"BROKEN_AT_BASE_3\" REAL NOT NULL ," + // 14: broken_at_base_3
-                "\"BROKEN_AT_BASE_4\" REAL NOT NULL ," + // 15: broken_at_base_4
-                "\"BROKEN_HALF_WAY_1\" REAL NOT NULL ," + // 16: broken_half_way_1
-                "\"BROKEN_HALF_WAY_2\" REAL NOT NULL ," + // 17: broken_half_way_2
-                "\"BROKEN_HALF_WAY_3\" REAL NOT NULL ," + // 18: broken_half_way_3
-                "\"BROKEN_HALF_WAY_4\" REAL NOT NULL ," + // 19: broken_half_way_4
-                "\"REMARKS\" TEXT," + // 20: remarks
-                "\"HECTARS_REPRESENTED_ON_THIS_FORM\" REAL NOT NULL ," + // 21: hectars_represented_on_this_form
-                "\"HECTARES\" REAL NOT NULL );"); // 22: hectares
+                "\"UPLOADED\" INTEGER NOT NULL ," + // 4: uploaded
+                "\"UNDAMAGED_1\" REAL NOT NULL ," + // 5: undamaged_1
+                "\"UNDAMAGED_2\" REAL NOT NULL ," + // 6: undamaged_2
+                "\"UNDAMAGED_3\" REAL NOT NULL ," + // 7: undamaged_3
+                "\"UNDAMAGED_4\" REAL NOT NULL ," + // 8: undamaged_4
+                "\"MISSING_STAND_1\" REAL NOT NULL ," + // 9: missing_stand_1
+                "\"MISSING_STAND_2\" REAL NOT NULL ," + // 10: missing_stand_2
+                "\"MISSING_STAND_3\" REAL NOT NULL ," + // 11: missing_stand_3
+                "\"MISSING_STAND_4\" REAL NOT NULL ," + // 12: missing_stand_4
+                "\"BROKEN_AT_BASE_1\" REAL NOT NULL ," + // 13: broken_at_base_1
+                "\"BROKEN_AT_BASE_2\" REAL NOT NULL ," + // 14: broken_at_base_2
+                "\"BROKEN_AT_BASE_3\" REAL NOT NULL ," + // 15: broken_at_base_3
+                "\"BROKEN_AT_BASE_4\" REAL NOT NULL ," + // 16: broken_at_base_4
+                "\"BROKEN_HALF_WAY_1\" REAL NOT NULL ," + // 17: broken_half_way_1
+                "\"BROKEN_HALF_WAY_2\" REAL NOT NULL ," + // 18: broken_half_way_2
+                "\"BROKEN_HALF_WAY_3\" REAL NOT NULL ," + // 19: broken_half_way_3
+                "\"BROKEN_HALF_WAY_4\" REAL NOT NULL ," + // 20: broken_half_way_4
+                "\"REMARKS\" TEXT," + // 21: remarks
+                "\"HECTARS_REPRESENTED_ON_THIS_FORM\" REAL NOT NULL ," + // 22: hectars_represented_on_this_form
+                "\"HECTARES\" REAL NOT NULL );"); // 23: hectares
     }
 
     /** Drops the underlying database table. */
@@ -104,29 +106,30 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
         stmt.bindLong(2, entity.getGrower_id());
         stmt.bindLong(3, entity.getLand_id());
         stmt.bindLong(4, entity.getSub_division());
-        stmt.bindDouble(5, entity.getUndamaged_1());
-        stmt.bindDouble(6, entity.getUndamaged_2());
-        stmt.bindDouble(7, entity.getUndamaged_3());
-        stmt.bindDouble(8, entity.getUndamaged_4());
-        stmt.bindDouble(9, entity.getMissing_stand_1());
-        stmt.bindDouble(10, entity.getMissing_stand_2());
-        stmt.bindDouble(11, entity.getMissing_stand_3());
-        stmt.bindDouble(12, entity.getMissing_stand_4());
-        stmt.bindDouble(13, entity.getBroken_at_base_1());
-        stmt.bindDouble(14, entity.getBroken_at_base_2());
-        stmt.bindDouble(15, entity.getBroken_at_base_3());
-        stmt.bindDouble(16, entity.getBroken_at_base_4());
-        stmt.bindDouble(17, entity.getBroken_half_way_1());
-        stmt.bindDouble(18, entity.getBroken_half_way_2());
-        stmt.bindDouble(19, entity.getBroken_half_way_3());
-        stmt.bindDouble(20, entity.getBroken_half_way_4());
+        stmt.bindLong(5, entity.getUploaded());
+        stmt.bindDouble(6, entity.getUndamaged_1());
+        stmt.bindDouble(7, entity.getUndamaged_2());
+        stmt.bindDouble(8, entity.getUndamaged_3());
+        stmt.bindDouble(9, entity.getUndamaged_4());
+        stmt.bindDouble(10, entity.getMissing_stand_1());
+        stmt.bindDouble(11, entity.getMissing_stand_2());
+        stmt.bindDouble(12, entity.getMissing_stand_3());
+        stmt.bindDouble(13, entity.getMissing_stand_4());
+        stmt.bindDouble(14, entity.getBroken_at_base_1());
+        stmt.bindDouble(15, entity.getBroken_at_base_2());
+        stmt.bindDouble(16, entity.getBroken_at_base_3());
+        stmt.bindDouble(17, entity.getBroken_at_base_4());
+        stmt.bindDouble(18, entity.getBroken_half_way_1());
+        stmt.bindDouble(19, entity.getBroken_half_way_2());
+        stmt.bindDouble(20, entity.getBroken_half_way_3());
+        stmt.bindDouble(21, entity.getBroken_half_way_4());
  
         String remarks = entity.getRemarks();
         if (remarks != null) {
-            stmt.bindString(21, remarks);
+            stmt.bindString(22, remarks);
         }
-        stmt.bindDouble(22, entity.getHectars_represented_on_this_form());
-        stmt.bindDouble(23, entity.getHectares());
+        stmt.bindDouble(23, entity.getHectars_represented_on_this_form());
+        stmt.bindDouble(24, entity.getHectares());
     }
 
     @Override
@@ -140,29 +143,30 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
         stmt.bindLong(2, entity.getGrower_id());
         stmt.bindLong(3, entity.getLand_id());
         stmt.bindLong(4, entity.getSub_division());
-        stmt.bindDouble(5, entity.getUndamaged_1());
-        stmt.bindDouble(6, entity.getUndamaged_2());
-        stmt.bindDouble(7, entity.getUndamaged_3());
-        stmt.bindDouble(8, entity.getUndamaged_4());
-        stmt.bindDouble(9, entity.getMissing_stand_1());
-        stmt.bindDouble(10, entity.getMissing_stand_2());
-        stmt.bindDouble(11, entity.getMissing_stand_3());
-        stmt.bindDouble(12, entity.getMissing_stand_4());
-        stmt.bindDouble(13, entity.getBroken_at_base_1());
-        stmt.bindDouble(14, entity.getBroken_at_base_2());
-        stmt.bindDouble(15, entity.getBroken_at_base_3());
-        stmt.bindDouble(16, entity.getBroken_at_base_4());
-        stmt.bindDouble(17, entity.getBroken_half_way_1());
-        stmt.bindDouble(18, entity.getBroken_half_way_2());
-        stmt.bindDouble(19, entity.getBroken_half_way_3());
-        stmt.bindDouble(20, entity.getBroken_half_way_4());
+        stmt.bindLong(5, entity.getUploaded());
+        stmt.bindDouble(6, entity.getUndamaged_1());
+        stmt.bindDouble(7, entity.getUndamaged_2());
+        stmt.bindDouble(8, entity.getUndamaged_3());
+        stmt.bindDouble(9, entity.getUndamaged_4());
+        stmt.bindDouble(10, entity.getMissing_stand_1());
+        stmt.bindDouble(11, entity.getMissing_stand_2());
+        stmt.bindDouble(12, entity.getMissing_stand_3());
+        stmt.bindDouble(13, entity.getMissing_stand_4());
+        stmt.bindDouble(14, entity.getBroken_at_base_1());
+        stmt.bindDouble(15, entity.getBroken_at_base_2());
+        stmt.bindDouble(16, entity.getBroken_at_base_3());
+        stmt.bindDouble(17, entity.getBroken_at_base_4());
+        stmt.bindDouble(18, entity.getBroken_half_way_1());
+        stmt.bindDouble(19, entity.getBroken_half_way_2());
+        stmt.bindDouble(20, entity.getBroken_half_way_3());
+        stmt.bindDouble(21, entity.getBroken_half_way_4());
  
         String remarks = entity.getRemarks();
         if (remarks != null) {
-            stmt.bindString(21, remarks);
+            stmt.bindString(22, remarks);
         }
-        stmt.bindDouble(22, entity.getHectars_represented_on_this_form());
-        stmt.bindDouble(23, entity.getHectares());
+        stmt.bindDouble(23, entity.getHectars_represented_on_this_form());
+        stmt.bindDouble(24, entity.getHectares());
     }
 
     @Override
@@ -177,25 +181,26 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
             cursor.getInt(offset + 1), // grower_id
             cursor.getInt(offset + 2), // land_id
             cursor.getInt(offset + 3), // sub_division
-            cursor.getDouble(offset + 4), // undamaged_1
-            cursor.getDouble(offset + 5), // undamaged_2
-            cursor.getDouble(offset + 6), // undamaged_3
-            cursor.getDouble(offset + 7), // undamaged_4
-            cursor.getDouble(offset + 8), // missing_stand_1
-            cursor.getDouble(offset + 9), // missing_stand_2
-            cursor.getDouble(offset + 10), // missing_stand_3
-            cursor.getDouble(offset + 11), // missing_stand_4
-            cursor.getDouble(offset + 12), // broken_at_base_1
-            cursor.getDouble(offset + 13), // broken_at_base_2
-            cursor.getDouble(offset + 14), // broken_at_base_3
-            cursor.getDouble(offset + 15), // broken_at_base_4
-            cursor.getDouble(offset + 16), // broken_half_way_1
-            cursor.getDouble(offset + 17), // broken_half_way_2
-            cursor.getDouble(offset + 18), // broken_half_way_3
-            cursor.getDouble(offset + 19), // broken_half_way_4
-            cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20), // remarks
-            cursor.getDouble(offset + 21), // hectars_represented_on_this_form
-            cursor.getDouble(offset + 22) // hectares
+            cursor.getInt(offset + 4), // uploaded
+            cursor.getDouble(offset + 5), // undamaged_1
+            cursor.getDouble(offset + 6), // undamaged_2
+            cursor.getDouble(offset + 7), // undamaged_3
+            cursor.getDouble(offset + 8), // undamaged_4
+            cursor.getDouble(offset + 9), // missing_stand_1
+            cursor.getDouble(offset + 10), // missing_stand_2
+            cursor.getDouble(offset + 11), // missing_stand_3
+            cursor.getDouble(offset + 12), // missing_stand_4
+            cursor.getDouble(offset + 13), // broken_at_base_1
+            cursor.getDouble(offset + 14), // broken_at_base_2
+            cursor.getDouble(offset + 15), // broken_at_base_3
+            cursor.getDouble(offset + 16), // broken_at_base_4
+            cursor.getDouble(offset + 17), // broken_half_way_1
+            cursor.getDouble(offset + 18), // broken_half_way_2
+            cursor.getDouble(offset + 19), // broken_half_way_3
+            cursor.getDouble(offset + 20), // broken_half_way_4
+            cursor.isNull(offset + 21) ? null : cursor.getString(offset + 21), // remarks
+            cursor.getDouble(offset + 22), // hectars_represented_on_this_form
+            cursor.getDouble(offset + 23) // hectares
         );
         return entity;
     }
@@ -206,25 +211,26 @@ public class tbl_worksheet_modelDao extends AbstractDao<tbl_worksheet_model, Lon
         entity.setGrower_id(cursor.getInt(offset + 1));
         entity.setLand_id(cursor.getInt(offset + 2));
         entity.setSub_division(cursor.getInt(offset + 3));
-        entity.setUndamaged_1(cursor.getDouble(offset + 4));
-        entity.setUndamaged_2(cursor.getDouble(offset + 5));
-        entity.setUndamaged_3(cursor.getDouble(offset + 6));
-        entity.setUndamaged_4(cursor.getDouble(offset + 7));
-        entity.setMissing_stand_1(cursor.getDouble(offset + 8));
-        entity.setMissing_stand_2(cursor.getDouble(offset + 9));
-        entity.setMissing_stand_3(cursor.getDouble(offset + 10));
-        entity.setMissing_stand_4(cursor.getDouble(offset + 11));
-        entity.setBroken_at_base_1(cursor.getDouble(offset + 12));
-        entity.setBroken_at_base_2(cursor.getDouble(offset + 13));
-        entity.setBroken_at_base_3(cursor.getDouble(offset + 14));
-        entity.setBroken_at_base_4(cursor.getDouble(offset + 15));
-        entity.setBroken_half_way_1(cursor.getDouble(offset + 16));
-        entity.setBroken_half_way_2(cursor.getDouble(offset + 17));
-        entity.setBroken_half_way_3(cursor.getDouble(offset + 18));
-        entity.setBroken_half_way_4(cursor.getDouble(offset + 19));
-        entity.setRemarks(cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20));
-        entity.setHectars_represented_on_this_form(cursor.getDouble(offset + 21));
-        entity.setHectares(cursor.getDouble(offset + 22));
+        entity.setUploaded(cursor.getInt(offset + 4));
+        entity.setUndamaged_1(cursor.getDouble(offset + 5));
+        entity.setUndamaged_2(cursor.getDouble(offset + 6));
+        entity.setUndamaged_3(cursor.getDouble(offset + 7));
+        entity.setUndamaged_4(cursor.getDouble(offset + 8));
+        entity.setMissing_stand_1(cursor.getDouble(offset + 9));
+        entity.setMissing_stand_2(cursor.getDouble(offset + 10));
+        entity.setMissing_stand_3(cursor.getDouble(offset + 11));
+        entity.setMissing_stand_4(cursor.getDouble(offset + 12));
+        entity.setBroken_at_base_1(cursor.getDouble(offset + 13));
+        entity.setBroken_at_base_2(cursor.getDouble(offset + 14));
+        entity.setBroken_at_base_3(cursor.getDouble(offset + 15));
+        entity.setBroken_at_base_4(cursor.getDouble(offset + 16));
+        entity.setBroken_half_way_1(cursor.getDouble(offset + 17));
+        entity.setBroken_half_way_2(cursor.getDouble(offset + 18));
+        entity.setBroken_half_way_3(cursor.getDouble(offset + 19));
+        entity.setBroken_half_way_4(cursor.getDouble(offset + 20));
+        entity.setRemarks(cursor.isNull(offset + 21) ? null : cursor.getString(offset + 21));
+        entity.setHectars_represented_on_this_form(cursor.getDouble(offset + 22));
+        entity.setHectares(cursor.getDouble(offset + 23));
      }
     
     @Override

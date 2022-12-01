@@ -26,7 +26,8 @@ import java.util.UUID;
 
 public class globals {
 //    public static String server_url="http://167.86.73.213/thi";//online
-    public static String server_url="http://192.168.100.150:56744";//local centric data main
+//    public static String server_url="http://192.168.100.150:56744";//local centric data main
+    public static String server_url="http://192.168.1.103:56744";//home
 
     public static int getLineNumber() {
         return Thread.currentThread().getStackTrace()[2].getLineNumber();

@@ -8,10 +8,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/custom_error_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/custom_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/layout/spinner_view_black.xml" value="0.75" />
+        <entry key="..\:/AndroidProjects/thi_mobile_app/app/src/main/res/menu/menu_tasks_popup.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

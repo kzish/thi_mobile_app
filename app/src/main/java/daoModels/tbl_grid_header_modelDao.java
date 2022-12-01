@@ -37,6 +37,7 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
         public final static Property Signature_inspector = new Property(10, String.class, "signature_inspector", false, "SIGNATURE_INSPECTOR");
         public final static Property Signature_inspector2 = new Property(11, String.class, "signature_inspector2", false, "SIGNATURE_INSPECTOR2");
         public final static Property Subdivision_map = new Property(12, String.class, "subdivision_map", false, "SUBDIVISION_MAP");
+        public final static Property Uploaded = new Property(13, int.class, "uploaded", false, "UPLOADED");
     }
 
 
@@ -64,7 +65,8 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
                 "\"SIGNATURE_GROWER\" TEXT," + // 9: signature_grower
                 "\"SIGNATURE_INSPECTOR\" TEXT," + // 10: signature_inspector
                 "\"SIGNATURE_INSPECTOR2\" TEXT," + // 11: signature_inspector2
-                "\"SUBDIVISION_MAP\" TEXT);"); // 12: subdivision_map
+                "\"SUBDIVISION_MAP\" TEXT," + // 12: subdivision_map
+                "\"UPLOADED\" INTEGER NOT NULL );"); // 13: uploaded
         // Add Indexes
         db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_GRID_HEADER_MODEL_GROWER_ID ON \"TBL_GRID_HEADER_MODEL\"" +
                 " (\"GROWER_ID\" ASC);");
@@ -142,6 +144,7 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
         if (subdivision_map != null) {
             stmt.bindString(13, subdivision_map);
         }
+        stmt.bindLong(14, entity.getUploaded());
     }
 
     @Override
@@ -208,6 +211,7 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
         if (subdivision_map != null) {
             stmt.bindString(13, subdivision_map);
         }
+        stmt.bindLong(14, entity.getUploaded());
     }
 
     @Override
@@ -230,7 +234,8 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
             cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9), // signature_grower
             cursor.isNull(offset + 10) ? null : cursor.getString(offset + 10), // signature_inspector
             cursor.isNull(offset + 11) ? null : cursor.getString(offset + 11), // signature_inspector2
-            cursor.isNull(offset + 12) ? null : cursor.getString(offset + 12) // subdivision_map
+            cursor.isNull(offset + 12) ? null : cursor.getString(offset + 12), // subdivision_map
+            cursor.getInt(offset + 13) // uploaded
         );
         return entity;
     }
@@ -250,6 +255,7 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
         entity.setSignature_inspector(cursor.isNull(offset + 10) ? null : cursor.getString(offset + 10));
         entity.setSignature_inspector2(cursor.isNull(offset + 11) ? null : cursor.getString(offset + 11));
         entity.setSubdivision_map(cursor.isNull(offset + 12) ? null : cursor.getString(offset + 12));
+        entity.setUploaded(cursor.getInt(offset + 13));
      }
     
     @Override

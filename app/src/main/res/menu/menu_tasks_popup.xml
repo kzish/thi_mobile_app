@@ -8,9 +8,6 @@
         android:fontFamily="@font/muli_bold"
         android:title="open inspection"/>
 
-
-
-
     <item
         android:id="@+id/menu_add_images"
         android:fontFamily="@font/muli_bold"
@@ -28,6 +25,12 @@
         android:id="@+id/menu_upload"
         android:fontFamily="@font/muli_bold"
         android:title="submit inspection"/>
+
+    <item
+        android:icon="@drawable/ic_plant"
+        android:id="@+id/menu_delete"
+        android:fontFamily="@font/muli_bold"
+        android:title="delete inspection"/>
 
 
 

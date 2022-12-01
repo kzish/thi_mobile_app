@@ -14,53 +14,50 @@
         android:orientation="vertical" >
 
         <LinearLayout android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#192832">
-            <RelativeLayout
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:background="@drawable/tobacco">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/logo"/>
 
                 <TextView
                     android:id="@+id/txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/logo"
-                    android:layout_centerInParent="true"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/year"
+                    android:text="2022-2023"
                     android:textColor="#fff"
-                    android:textSize="60dip"
+                    android:textSize="40dip"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txt1"
-                    android:layout_centerInParent="true"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="Agricultural Season"
                     android:textColor="#fff"
-                    android:textSize="28dip"
+                    android:textSize="20dip"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/logo"></ImageView>
-
-            </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#fff">
             <RelativeLayout
@@ -151,13 +148,5 @@
 
 
     </LinearLayout>
-
-
-
-
-
-
-
-
 
 </LinearLayout>

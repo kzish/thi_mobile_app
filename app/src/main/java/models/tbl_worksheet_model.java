@@ -18,6 +18,7 @@ public class tbl_worksheet_model {
     public int grower_id;
     public int land_id;
     public int sub_division;
+    public int uploaded;
 
     public double undamaged_1,undamaged_2,undamaged_3,undamaged_4;
     public double missing_stand_1,missing_stand_2,missing_stand_3,missing_stand_4;
@@ -31,18 +32,20 @@ public class tbl_worksheet_model {
 
 
 
-    @Generated(hash = 710369251)
+    @Generated(hash = 1207746483)
     public tbl_worksheet_model(Long _id, int grower_id, int land_id, int sub_division,
-            double undamaged_1, double undamaged_2, double undamaged_3, double undamaged_4,
-            double missing_stand_1, double missing_stand_2, double missing_stand_3,
-            double missing_stand_4, double broken_at_base_1, double broken_at_base_2,
-            double broken_at_base_3, double broken_at_base_4, double broken_half_way_1,
-            double broken_half_way_2, double broken_half_way_3, double broken_half_way_4,
-            String remarks, double hectars_represented_on_this_form, double hectares) {
+            int uploaded, double undamaged_1, double undamaged_2, double undamaged_3,
+            double undamaged_4, double missing_stand_1, double missing_stand_2,
+            double missing_stand_3, double missing_stand_4, double broken_at_base_1,
+            double broken_at_base_2, double broken_at_base_3, double broken_at_base_4,
+            double broken_half_way_1, double broken_half_way_2, double broken_half_way_3,
+            double broken_half_way_4, String remarks, double hectars_represented_on_this_form,
+            double hectares) {
         this._id = _id;
         this.grower_id = grower_id;
         this.land_id = land_id;
         this.sub_division = sub_division;
+        this.uploaded = uploaded;
         this.undamaged_1 = undamaged_1;
         this.undamaged_2 = undamaged_2;
         this.undamaged_3 = undamaged_3;
@@ -287,6 +290,14 @@ public class tbl_worksheet_model {
 
     public void setHectares(double hectares) {
         this.hectares = hectares;
+    }
+
+    public int getUploaded() {
+        return this.uploaded;
+    }
+
+    public void setUploaded(int uploaded) {
+        this.uploaded = uploaded;
     }
 
 

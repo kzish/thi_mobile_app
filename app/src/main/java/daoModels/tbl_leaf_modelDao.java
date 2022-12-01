@@ -33,6 +33,7 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
         public final static Property Plant_id = new Property(6, int.class, "plant_id", false, "PLANT_ID");
         public final static Property Leaf_number = new Property(7, int.class, "leaf_number", false, "LEAF_NUMBER");
         public final static Property Percentage_damage = new Property(8, String.class, "percentage_damage", false, "PERCENTAGE_DAMAGE");
+        public final static Property Uploaded = new Property(9, int.class, "uploaded", false, "UPLOADED");
     }
 
 
@@ -56,7 +57,8 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
                 "\"BATCH_ID\" INTEGER NOT NULL ," + // 5: batch_id
                 "\"PLANT_ID\" INTEGER NOT NULL ," + // 6: plant_id
                 "\"LEAF_NUMBER\" INTEGER NOT NULL ," + // 7: leaf_number
-                "\"PERCENTAGE_DAMAGE\" TEXT);"); // 8: percentage_damage
+                "\"PERCENTAGE_DAMAGE\" TEXT," + // 8: percentage_damage
+                "\"UPLOADED\" INTEGER NOT NULL );"); // 9: uploaded
     }
 
     /** Drops the underlying database table. */
@@ -85,6 +87,7 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
         if (percentage_damage != null) {
             stmt.bindString(9, percentage_damage);
         }
+        stmt.bindLong(10, entity.getUploaded());
     }
 
     @Override
@@ -107,6 +110,7 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
         if (percentage_damage != null) {
             stmt.bindString(9, percentage_damage);
         }
+        stmt.bindLong(10, entity.getUploaded());
     }
 
     @Override
@@ -125,7 +129,8 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
             cursor.getInt(offset + 5), // batch_id
             cursor.getInt(offset + 6), // plant_id
             cursor.getInt(offset + 7), // leaf_number
-            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8) // percentage_damage
+            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8), // percentage_damage
+            cursor.getInt(offset + 9) // uploaded
         );
         return entity;
     }
@@ -141,6 +146,7 @@ public class tbl_leaf_modelDao extends AbstractDao<tbl_leaf_model, Long> {
         entity.setPlant_id(cursor.getInt(offset + 6));
         entity.setLeaf_number(cursor.getInt(offset + 7));
         entity.setPercentage_damage(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
+        entity.setUploaded(cursor.getInt(offset + 9));
      }
     
     @Override

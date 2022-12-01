@@ -29,15 +29,14 @@ public class tbl_grid_header_model {
     public String signature_inspector;
     public String signature_inspector2;
     public String subdivision_map;
+    public int uploaded;
 
-
-
-    @Generated(hash = 454055977)
+    @Generated(hash = 348584316)
     public tbl_grid_header_model(Long id, String grower_id, String land_id,
             String dateOfInspection, String topped, double total_area_of_field_damaged,
             String stage_of_development, String variety, String intended_treatment_of_land,
             String signature_grower, String signature_inspector, String signature_inspector2,
-            String subdivision_map) {
+            String subdivision_map, int uploaded) {
         this.id = id;
         this.grower_id = grower_id;
         this.land_id = land_id;
@@ -51,6 +50,7 @@ public class tbl_grid_header_model {
         this.signature_inspector = signature_inspector;
         this.signature_inspector2 = signature_inspector2;
         this.subdivision_map = subdivision_map;
+        this.uploaded = uploaded;
     }
     @Generated(hash = 1371341719)
     public tbl_grid_header_model() {
@@ -140,6 +140,10 @@ public class tbl_grid_header_model {
     public void setSubdivision_map(String subdivision_map) {
         this.subdivision_map = subdivision_map;
     }
-   
-
+    public int getUploaded() {
+        return this.uploaded;
+    }
+    public void setUploaded(int uploaded) {
+        this.uploaded = uploaded;
+    }
 }
