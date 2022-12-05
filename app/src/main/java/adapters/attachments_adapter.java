@@ -140,7 +140,7 @@ public class attachments_adapter extends BaseAdapter {
 
                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                         thi.CTX.startActivity(intent);
-                                        Log.e("saint", attach.getFilepath());
+                                        Log.e("kz", attach.getFilepath());
                                         break;
                                     case R.id.menu_delete:
                                         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

@@ -45,7 +45,7 @@ public class syncGetLands {
                         public void onResponse(String response) {
 
                             
-                            Log.e(tag,"response.............."+response);
+                            Log.e("kz","response.............."+response);
                              {
                                 try {
                                     tbl_land_modelDao tbl_land_model_ = thi.daoSession.getTbl_land_modelDao();
@@ -75,7 +75,7 @@ public class syncGetLands {
                                     }
 
                                 } catch (Exception ex) {
-                                    Log.e(tag,"Exception..............."+ex+"");
+                                    Log.e("kz","Exception..............."+ex+"");
                                 }
                             }
 
@@ -83,7 +83,7 @@ public class syncGetLands {
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e(tag,"error.............."+error);
+                    Log.e("kz","error.............."+error);
                    // Toast.makeText(MainActivity.act,"soyuz "+error.getMessage(),Toast.LENGTH_LONG).show();
                 }
             });
@@ -91,7 +91,7 @@ public class syncGetLands {
 
         }catch (Exception ex)
         {
-            Log.e(tag,"exception................."+ex);
+            Log.e("kz","exception................."+ex);
             isBusy=false;
             return false;
         }

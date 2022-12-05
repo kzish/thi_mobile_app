@@ -53,7 +53,7 @@ public class syncFetchTasks {
                         public void onResponse(String response) {
 
                             HomeActivity.pd.hide();
-                            Log.e(tag,"response..........."+response);
+                            Log.e("kz","response..........."+response);
                             if(response.equals("err")) {
                                 HomeActivity.ed.showCustomDialog(HomeActivity.activity,"An error occurred...\nTry again");
                             }
@@ -95,7 +95,7 @@ public class syncFetchTasks {
                                     HomeActivity.loadAllTasks();
                                     HomeActivity.setStats();
                                 } catch (Exception ex) {
-                                            Log.e(TAG,"...............line 97 "+ex+"");
+                                            Log.e("kz","...............line 97 "+ex+"");
                                 }
                             }
 
@@ -105,7 +105,7 @@ public class syncFetchTasks {
                 public void onErrorResponse(VolleyError error) {
                     HomeActivity.pd.hide();
                     HomeActivity.ed.showCustomDialog(HomeActivity.activity,"Network error...\ntry again...");
-                    Log.e(TAG, "..................line 107 :" + error);
+                    Log.e("kz", "..................line 107 :" + error);
                 }
             }){
                 protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
@@ -121,7 +121,7 @@ public class syncFetchTasks {
 
         }catch (Exception ex)
         {
-            Log.e(TAG,".................:123: "+ex);
+            Log.e("kz",".................:123: "+ex);
             isBusy=false;
             return false;
         }

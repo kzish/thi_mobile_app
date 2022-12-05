@@ -36,7 +36,7 @@ import zw.co.qbit.thi_app.SubDivisionIndex;
 public class tasksAdapter extends BaseAdapter {
     Activity activity;
     List<tbl_task_model> tasks;
-    String tag = "tasksAdapter";
+    String tag = "kz";
 
     public tasksAdapter(Activity act, List<tbl_task_model> tasks_) {
         tasks = tasks_;
@@ -92,7 +92,7 @@ public class tasksAdapter extends BaseAdapter {
                                 inspections.putExtra("land_id", g.land_id);
                                 inspections.putExtra("grower_id", g.grower_id);
                                 inspections.putExtra("farm_address", g.directions_to_farm);
-                                Log.e(tag, "..........saint............ growerid" + g.grower_id);
+                                Log.e("kz", "..........saint............ growerid" + g.grower_id);
                                 activity.startActivity(inspections);
                                 break;
                             case R.id.menu_upload:

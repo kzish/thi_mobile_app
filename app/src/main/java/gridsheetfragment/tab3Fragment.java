@@ -592,7 +592,7 @@ public class tab3Fragment extends Fragment {
 
 
             } catch (Exception ex) {
-                Log.e(tag, "...............line 600" + ex);
+                Log.e("kz", "...............line 600" + ex);
             }
             return null;
         }
@@ -900,7 +900,7 @@ public class tab3Fragment extends Fragment {
             try {
                 saveGridSheet(null);
             } catch (Exception ex) {
-                Log.e(tag, "....................." + ex + "");
+                Log.e("kz", "....................." + ex + "");
                 return "err";
             }
             return "ok";
@@ -922,7 +922,7 @@ public class tab3Fragment extends Fragment {
                             tbl_worksheet_modelDao.Properties.Grower_id.eq(grower_id),
                             tbl_worksheet_modelDao.Properties.Sub_division.eq(subdivision)
                     ).list().get(0);
-            Log.e(tag, "worksheet id yepanpa.............." + w._id);
+            Log.e("kz", "worksheet id yepanpa.............." + w._id);
 
             String worksheet_id = w._id + "";
 
@@ -1701,7 +1701,7 @@ public class tab3Fragment extends Fragment {
             }
 
         } catch (Exception ex) {
-            Log.e(tag, ".............line 1695 " + ex);
+            Log.e("kz", ".............line 1695 " + ex);
         }
 
     }
@@ -1758,7 +1758,7 @@ public class tab3Fragment extends Fragment {
             tableDeleteQuery.executeDeleteWithoutDetachingEntities();
             thi.daoSession.getTbl_leaf_modelDao().insert(newLeaf);
         } catch (Exception ex) {
-            Log.e(tag, "....line 1745: " + ex);
+            Log.e("kz", "....line 1745: " + ex);
         }
 
 
@@ -1773,7 +1773,7 @@ public class tab3Fragment extends Fragment {
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {
-            Log.e("SnackBarTfragment", "" + ex.getMessage());
+            Log.e("kz", "" + ex.getMessage());
         }
     }
 

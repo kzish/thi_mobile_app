@@ -237,7 +237,7 @@ public class SubDivisionIndex extends AppCompatActivity {
             String land_id = mTasks.get(pos).land_id;
             return land_id;
         } catch (Exception ex) {
-            Log.e(tag, "line 137: " + ex + "kz");
+            Log.e("kz", "line 137: " + ex + "kz");
             return "";
         }
 
@@ -267,7 +267,7 @@ public class SubDivisionIndex extends AppCompatActivity {
 //            spinnerGrowerLand.setAdapter(adapter);
         }
         catch (Exception ex) {
-            Log.e(tag, "line 130.............." + ex);
+            Log.e("kz", "line 130.............." + ex);
         }
     }
 
@@ -301,7 +301,7 @@ public class SubDivisionIndex extends AppCompatActivity {
             adapter.setDropDownViewResource(R.layout.spinner_view_black);
             spinnerGrowerLand.setAdapter(adapter);
         } catch (Exception ex) {
-            Log.e(tag, "line 130.............." + ex);
+            Log.e("kz", "line 130.............." + ex);
         }
 
         refreshList();
@@ -395,7 +395,7 @@ public class SubDivisionIndex extends AppCompatActivity {
 
             return true;
         } catch (Exception ex) {
-            Log.e(tag, "..................line 250" + ex);
+            Log.e("kz", "..................line 250" + ex);
             return false;
         }
 
@@ -477,7 +477,7 @@ public class SubDivisionIndex extends AppCompatActivity {
             }
 
         } catch (Exception ex) {
-            Log.e(tag, "............. line 304" + ex);
+            Log.e("kz", "............. line 304" + ex);
         }
 
     }
@@ -493,7 +493,7 @@ public class SubDivisionIndex extends AppCompatActivity {
             snackbar.show();
         }catch (Exception ex)
         {
-            Log.e(tag,"....................line 473 "+ex);
+            Log.e("kz","....................line 473 "+ex);
         }
     }
 

@@ -76,9 +76,9 @@ public class syncUploadTaskGridHeader {
                         @Override
                         public void onResponse(String response) {
                             HomeActivity.pd.hide();
+                            Log.e("kz", "gridheader upload response:............." + response);
                             if (response.equals("0")) {
-                                Log.e(tag, "response:............." + response);
-                                Log.e(tag, "upload gridheader failed");
+                                Log.e("kz", "upload gridheader failed");
                             } else {
                                 HomeActivity.id.showCustomDialog(HomeActivity.activity, "Inspection Submitted...");
                                 gh.uploaded = 1;
@@ -89,13 +89,14 @@ public class syncUploadTaskGridHeader {
 
                                 tbl_task_modelDao taskDao = thi.daoSession.getTbl_task_modelDao();
                                 taskDao.update(task);
+                                Log.e("kz", "gridheader uploaded");
                             }
                             completed = true;
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e(tag, error.getMessage());
+                    Log.e("kz", error.getMessage());
                     completed = true;
                     HomeActivity.ed.showCustomDialog(HomeActivity.activity, "Error uploading inspection...");
                     HomeActivity.pd.hide();
@@ -122,7 +123,7 @@ public class syncUploadTaskGridHeader {
                         gridHeader.put("land_id", gh.land_id);
                         gridHeader.put("second_inspector_name", sig.second_inspector_name);
                     } catch (Exception ex) {
-                        Log.e(tag, ex.getMessage());
+                        Log.e("kz", ex.getMessage());
                     }
 
                     //now get the signatures
@@ -137,7 +138,7 @@ public class syncUploadTaskGridHeader {
                         sig_2ndinspector = MediaStore.Images.Media.getBitmap(thi.CTX.getContentResolver(), Uri.parse(sig.second_inspector_siginature_uri));
                         draw_map = MediaStore.Images.Media.getBitmap(thi.CTX.getContentResolver(), Uri.parse(sig.draw_map_uri));
                     } catch (Exception ex) {
-                        Log.e(tag, ex.getMessage());
+                        Log.e("kz", ex.getMessage());
                     }
                     params.put("gridheader", header_);
                     if (sig_grower != null) {
@@ -161,7 +162,7 @@ public class syncUploadTaskGridHeader {
             strReq.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 2, 1.0f));
             AppSingleton.getInstance(context).addToRequestQueue(strReq, REQUEST_tag);
         } catch (Exception ex) {
-            Log.e(tag, ex.getMessage());
+            Log.e("kz", ex.getMessage());
             return false;
         }
         return true;

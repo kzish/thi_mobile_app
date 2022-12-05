@@ -27,7 +27,7 @@ import zw.co.qbit.thi_app.thi;
 
 public class UploadInspection {
 
-    private static String message;
+    private static String message="";
 
     public static void upload(final tbl_task_model task) {
 
@@ -47,8 +47,13 @@ public class UploadInspection {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+                HomeActivity.pd.hide();
                 loadAllTasks();
                 Log.e("kz", "onPostExecute");
+                Log.e("kz", message);
+                if(!message.equals("")){
+                    HomeActivity.ed.showCustomDialog(HomeActivity.activity, message);
+                }
             }
 
             @Override
@@ -57,7 +62,7 @@ public class UploadInspection {
                 tbl_user_model user = thi.daoSession.getTbl_user_modelDao().loadAll().get(0);
                 if (user == null) {
                     message = "User is null";
-                    return "";
+                    return message;
                 }
                 tbl_signature_model sig = thi.daoSession.getTbl_signature_modelDao()
                         .queryBuilder()
@@ -67,7 +72,7 @@ public class UploadInspection {
                         ).unique();
                 if (sig == null) {
                     message = "Signature is empty";
-                    return "";
+                    return message;
                 }
 
                 List<tbl_worksheet_model> myworksheets = thi.daoSession.getTbl_worksheet_modelDao()
@@ -77,7 +82,7 @@ public class UploadInspection {
 
                 if (myworksheets.size() == 0) {
                     message = "There are no worksheets";
-                    return "";
+                    return message;
                 }
                 tbl_grid_header_model gh = thi.daoSession.getTbl_grid_header_modelDao()
                         .queryBuilder()
@@ -89,15 +94,14 @@ public class UploadInspection {
 
                 if (gh == null) {
                     message = "Grid header not saved";
-                    return "";
+                    return message;
                 }
 
                 for (tbl_worksheet_model worksheet : myworksheets) {
                     List<tbl_leaf_model> myleaves = thi.daoSession.getTbl_leaf_modelDao()
                             .queryBuilder()
                             .where(
-                                    tbl_leaf_modelDao.Properties.Worksheet_id.eq(worksheet._id),
-                                    tbl_leaf_modelDao.Properties.Uploaded.eq(0)//only take leaves not uploaded
+                                    tbl_leaf_modelDao.Properties.Worksheet_id.eq(worksheet._id)//only thi worksheet leaves
                             )
                             .list();
 

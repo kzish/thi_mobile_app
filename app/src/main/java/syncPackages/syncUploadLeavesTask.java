@@ -60,23 +60,18 @@ public class syncUploadLeavesTask {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
+                            Log.e("kz", "upload leaves response:............." + response);
                             if (response.equals("0")) {
-                                Log.e(tag, "response:............." + response);
-                                Log.e(tag, "leaves not submitted");
+                                Log.e("kz", "leaves not submitted");
                             } else {
-                                //set the leaves sync status to true
-                                tbl_leaf_modelDao leafDao = thi.daoSession.getTbl_leaf_modelDao();
-                                for (tbl_leaf_model leaf : leaves) {
-                                    leaf.uploaded = 1;
-                                    leafDao.update(leaf);
-                                }
+                                Log.e("kz", "leaves submitted");
                             }
                             completed = true;
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e(tag, ".......................Error: line 139" + error);
+                    Log.e("kz", ".......................Error: line 139" + error);
                     completed = true;
                 }
             }) {
@@ -96,7 +91,7 @@ public class syncUploadLeavesTask {
                             obj.put("subdivision", leaf.subdivision);
                             jsonLeaves.put(obj);
                         } catch (Exception ex) {
-                            Log.e(tag, "line 130" + ex.getMessage());
+                            Log.e("kz", "line 130" + ex.getMessage());
                         }
                     }
                     params.put("leaves", jsonLeaves.toString());
@@ -107,7 +102,7 @@ public class syncUploadLeavesTask {
             strReq.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 2, 1.0f));
             AppSingleton.getInstance(context).addToRequestQueue(strReq, REQUEST_tag);
         } catch (Exception ex) {
-            Log.e(tag, "...................... line 301 " + ex);
+            Log.e("kz", "...................... line 301 " + ex);
             return false;
         }
         return true;

@@ -161,8 +161,8 @@ public class tab1Fragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_tab1, container, false);
         subdivision = getActivity().getIntent().getExtras().getString("subdivision");
         worksheet_id = getActivity().getIntent().getStringExtra("worksheet_id");
-        Log.e(tag, "worksheet_id.............." + worksheet_id);
-        Log.e(tag, "subdivision.............." + subdivision);
+        Log.e("kz", "worksheet_id.............." + worksheet_id);
+        Log.e("kz", "subdivision.............." + subdivision);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //        WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -597,7 +597,7 @@ public class tab1Fragment extends Fragment {
 
 
             } catch (Exception ex) {
-                Log.e(tag, "...............line 600" + ex);
+                Log.e("kz", "...............line 600" + ex);
             }
             return null;
         }
@@ -864,7 +864,7 @@ public class tab1Fragment extends Fragment {
             et433.setText(leaves[33][4][1]);
             et533.setText(leaves[33][5][1]);
         } catch (Exception ex) {
-            Log.e(tag, "..............line 866" + ex);
+            Log.e("kz", "..............line 866" + ex);
         }
 
     }
@@ -893,7 +893,7 @@ public class tab1Fragment extends Fragment {
             try {
                 saveGridSheet(null);
             } catch (Exception ex) {
-                Log.e(tag, "....................." + ex + "");
+                Log.e("kz", "....................." + ex + "");
                 return "err";
             }
             return "ok";
@@ -915,7 +915,7 @@ public class tab1Fragment extends Fragment {
                             tbl_worksheet_modelDao.Properties.Grower_id.eq(grower_id),
                             tbl_worksheet_modelDao.Properties.Sub_division.eq(subdivision)
                     ).list().get(0);
-            Log.e(tag, "worksheet id yepanpa.............." + w._id);
+            Log.e("kz", "worksheet id yepanpa.............." + w._id);
 
             String worksheet_id = w._id + "";
 
@@ -1694,7 +1694,7 @@ public class tab1Fragment extends Fragment {
             }
 
         } catch (Exception ex) {
-            Log.e(tag, ".............line 1695 " + ex);
+            Log.e("kz", ".............line 1695 " + ex);
         }
 
     }
@@ -1751,7 +1751,7 @@ public class tab1Fragment extends Fragment {
             tableDeleteQuery.executeDeleteWithoutDetachingEntities();
             thi.daoSession.getTbl_leaf_modelDao().insert(newLeaf);
         } catch (Exception ex) {
-            Log.e(tag, "....line 1745: " + ex);
+            Log.e("kz", "....line 1745: " + ex);
         }
 
 
@@ -1766,7 +1766,7 @@ public class tab1Fragment extends Fragment {
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {
-            Log.e("SnackBarTfragment", "" + ex.getMessage());
+            Log.e("kz", "" + ex.getMessage());
         }
     }
 

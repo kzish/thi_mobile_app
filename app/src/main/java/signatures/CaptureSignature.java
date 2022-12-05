@@ -172,7 +172,7 @@ public class CaptureSignature extends Activity {
 
 
                             }catch(Exception ex) {
-                                Log.e(tag, "...............line 164 " + ex);
+                                Log.e("kz", "...............line 164 " + ex);
                             }
 
                         } else {
@@ -191,7 +191,7 @@ public class CaptureSignature extends Activity {
                                 AddSignaturesActivity.imgfirstinspectorsignature.setImageURI(Uri.parse(signature_url));
 
                             }catch(Exception ex) {
-                                Log.e(tag, "...............line 183 " + ex);
+                                Log.e("kz", "...............line 183 " + ex);
                             }
 
 
@@ -211,7 +211,7 @@ public class CaptureSignature extends Activity {
 
 
                             }catch(Exception ex) {
-                                Log.e(tag, "...............line 164 " + ex);
+                                Log.e("kz", "...............line 164 " + ex);
                             }
 
 
@@ -231,7 +231,7 @@ public class CaptureSignature extends Activity {
                                 AddSignaturesActivity.imgSubDivisionDiagram.setImageURI(Uri.parse(signature_url));
 
                             }catch(Exception ex) {
-                                Log.e(tag, "...............line 183 " + ex);
+                                Log.e("kz", "...............line 183 " + ex);
                             }
 
 

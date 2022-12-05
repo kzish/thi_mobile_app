@@ -892,7 +892,7 @@ public class tab4Fragment extends Fragment {
             try {
                 saveGridSheet(null);
             } catch (Exception ex) {
-                Log.e(tag, "....................." + ex + "");
+                Log.e("kz", "....................." + ex + "");
                 return "err";
             }
             return "ok";
@@ -1745,7 +1745,7 @@ public class tab4Fragment extends Fragment {
             tableDeleteQuery.executeDeleteWithoutDetachingEntities();
             thi.daoSession.getTbl_leaf_modelDao().insert(newLeaf);
         } catch (Exception ex) {
-            Log.e(tag, "....line 1745: " + ex);
+            Log.e("kz", "....line 1745: " + ex);
         }
 
 
@@ -1761,7 +1761,7 @@ public class tab4Fragment extends Fragment {
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {
-            Log.e("SnackBarTfragment", "" + ex.getMessage());
+            Log.e("kz", "" + ex.getMessage());
         }
     }
 

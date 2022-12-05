@@ -25,9 +25,9 @@ import java.util.UUID;
  */
 
 public class globals {
-//    public static String server_url="http://167.86.73.213/thi";//online
+    public static String server_url="http://167.86.73.213/thi";//online
 //    public static String server_url="http://192.168.100.150:56744";//local centric data main
-    public static String server_url="http://192.168.1.103:56744";//home
+//    public static String server_url="http://192.168.1.103:56744";//home
 
     public static int getLineNumber() {
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
@@ -189,11 +189,11 @@ public class globals {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
-            Log.e("DirectoryAndSaveFile",e+"................................ createDirectoryAndSaveFile");
+            Log.e("kz",e+"................................ createDirectoryAndSaveFile");
             return "";
         }
 
-        Log.e("savedfile","........."+Environment.getExternalStorageDirectory() + "/thiData/"+fileName);
+        Log.e("kz","........."+Environment.getExternalStorageDirectory() + "/thiData/"+fileName);
         return "synced=false;"+Environment.getExternalStorageDirectory() + "/thiData/"+fileName;
         //added synced=false; to flag the file as needing to be synced
     }

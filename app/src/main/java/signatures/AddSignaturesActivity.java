@@ -156,12 +156,12 @@ public class AddSignaturesActivity extends AppCompatActivity {
                 imgsecondinspectorsignature.setImageURI(Uri.parse("file://"+sig.second_inspector_siginature_uri.replace("synced=true;", "").replace("synced=false;", "")));
                 imgSubDivisionDiagram.setImageURI(Uri.parse("file://"+sig.draw_map_uri.replace("synced=true;","").replace("synced=false;","")));
 
-                Log.e(tag,"/..........sig. "+sig.grower_signature_uri.replace("synced=true;", "").replace("synced=false;", ""));
-                Log.e(tag,"/..........sig. "+sig.inspector_signature_uri.replace("synced=true;", "").replace("synced=false;", ""));
-                Log.e(tag,"/..........sig. "+sig.second_inspector_siginature_uri.replace("synced=true;", "").replace("synced=false;", ""));
+                Log.e("kz","/..........sig. "+sig.grower_signature_uri.replace("synced=true;", "").replace("synced=false;", ""));
+                Log.e("kz","/..........sig. "+sig.inspector_signature_uri.replace("synced=true;", "").replace("synced=false;", ""));
+                Log.e("kz","/..........sig. "+sig.second_inspector_siginature_uri.replace("synced=true;", "").replace("synced=false;", ""));
             }
         } catch (Exception ex) {
-            Log.e(tag, "line 139................... " + ex);
+            Log.e("kz", "line 139................... " + ex);
         }
 
     }

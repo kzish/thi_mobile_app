@@ -51,7 +51,7 @@ public class syncUploadWorkSheetTask {
     public static boolean completed = false;
     static String message = "";
 
-    public boolean sync(Context context,final tbl_worksheet_model wk, final tbl_user_model user) {
+    public boolean sync(Context context, final tbl_worksheet_model wk, final tbl_user_model user) {
         try {
 
             StringRequest strReq = new StringRequest(Request.Method.POST,
@@ -60,20 +60,18 @@ public class syncUploadWorkSheetTask {
                         @Override
                         public void onResponse(String response) {
                             HomeActivity.pd.hide();
+                            Log.e("kz", "worksheet upload response............" + response);
                             if (response.equals("0")) {
-                                Log.e(tag, "response:............." + response);
-                                Log.e(tag, "upload worksheet failed");
+                                Log.e("kz", "upload worksheet failed");
                             } else {
-                                tbl_worksheet_modelDao dao = thi.daoSession.getTbl_worksheet_modelDao();
-                                wk.uploaded = 1;
-                                dao.update(wk);
+                                Log.e("kz", "worksheet uploaded");
                             }
                             completed = true;
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e(tag, error.getMessage());
+                    Log.e("kz", error.getMessage());
                     completed = true;
                 }
             }) {
@@ -93,17 +91,18 @@ public class syncUploadWorkSheetTask {
                         worksheet.put("land_id", wk.land_id);
                         worksheet.put("inspector_name", user.username);
                     } catch (Exception ex) {
-                        Log.e(tag, "................line 240" + ex);
+                        Log.e("kz", "................line 240" + ex);
                     }
                     params.put("worksheet", worksheet.toString());
                     return params;
                 }
+
                 ;
             };
             strReq.setRetryPolicy(new DefaultRetryPolicy(60 * 1000, 2, 1.0f));
             AppSingleton.getInstance(context).addToRequestQueue(strReq, REQUEST_tag);
         } catch (Exception ex) {
-            Log.e(tag, ex.getMessage());
+            Log.e("kz", ex.getMessage());
             return false;
         }
         return true;

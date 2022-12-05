@@ -364,7 +364,7 @@ public class HomeActivity extends AppCompatActivity implements
 
             getSupportActionBar().setTitle("");
         } catch (Exception ex) {
-            //Log.e("main title2",ex.getMessage()+"kz");
+            Log.e("kz",ex.getMessage()+"kz");
         }
 
 
@@ -445,7 +445,7 @@ public class HomeActivity extends AppCompatActivity implements
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.e("saint", "saint");
+        Log.e("kz", "saint");
 
         return false;
     }

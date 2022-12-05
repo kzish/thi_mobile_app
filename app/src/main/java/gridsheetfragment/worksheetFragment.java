@@ -280,7 +280,7 @@ public class worksheetFragment extends Fragment {
 
         } catch (Exception ex) {
             SetSnackBar("Error");
-            Log.e(tag, "...........line 279 " + ex);
+            Log.e("kz", "...........line 279 " + ex);
             return w;
         }
         return w;
@@ -355,7 +355,7 @@ public class worksheetFragment extends Fragment {
             if (new_.equals("1")) {
                 //clear all fields
                 txt_sub_div.setText(num_worksheets + "");
-                Log.e("numworksheet", num_worksheets + "");
+                Log.e("kz", num_worksheets + "");
                 txt_undamaged_1.setText("");
                 txt_undamaged_2.setText("");
                 txt_undamaged_3.setText("");
@@ -452,7 +452,7 @@ public class worksheetFragment extends Fragment {
             }
 
         } catch (Exception x) {
-            Log.e(tag, ".................. " + x);
+            Log.e("kz", ".................. " + x);
             SetSnackBar("Error");
         }
     }
@@ -503,7 +503,7 @@ public class worksheetFragment extends Fragment {
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         } catch (Exception ex) {
-            Log.e("SnackBarTfragment", "" + ex.getMessage());
+            Log.e("kz", "" + ex.getMessage());
         }
     }
 

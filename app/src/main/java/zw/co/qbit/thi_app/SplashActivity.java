@@ -68,8 +68,8 @@ public class SplashActivity extends AppCompatActivity {
         user.password= txt_password.getText().toString();
         user.loggedin= "true";
 
-        Log.e(tag,user.username);
-        Log.e(tag,user.password);
+        Log.e("kz",user.username);
+        Log.e("kz",user.password);
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 globals.server_url+"/mobileapi/login.aspx",
                 new Response.Listener<String>() {
@@ -77,7 +77,7 @@ public class SplashActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         pd.hide();
-                        Log.e(tag,"response..........."+response);
+                        Log.e("kz","response..........."+response);
                         btn_login.setEnabled(true);
                         if(response.equals("0")) {
 
@@ -111,7 +111,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.hide();
-                Log.e(tag,"error..........."+error);
+                Log.e("kz","error..........."+error);
                 ed.showCustomDialog(SplashActivity.this,"network error please try again...");
                 btn_login.setEnabled(true);
             }
