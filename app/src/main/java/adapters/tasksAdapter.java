@@ -89,6 +89,7 @@ public class tasksAdapter extends BaseAdapter {
                             case R.id.menu_edit:
                                 Intent inspections = new Intent(activity, SubDivisionIndex.class);
                                 inspections.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                inspections.putExtra("land_name", g.land_name);
                                 inspections.putExtra("land_id", g.land_id);
                                 inspections.putExtra("grower_id", g.grower_id);
                                 inspections.putExtra("farm_address", g.directions_to_farm);

@@ -89,24 +89,6 @@ public class HomeActivity extends AppCompatActivity implements
         tblrow1 =(TableRow)findViewById(R.id.tblrow1);
         tblrow2 =(TableRow)findViewById(R.id.tblrow2);
 
-
-        txt_search.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                loadAllTasks();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        //setSupportActionBar(toolbar);
         mHandler = new Handler();
         activity = this;
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -115,90 +97,18 @@ public class HomeActivity extends AppCompatActivity implements
         navigationView.setClickable(true);
         navigationView.bringToFront();//this is what make the side bar usabel
 
-        //navigationView
-        //fab = (FloatingActionButton) findViewById(R.id.fab);
-
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
         txtName = (TextView) navHeader.findViewById(R.id.txtname);
         txtBranch = (TextView) navHeader.findViewById(R.id.txtbranch);
         imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
         imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
-        loadNavHeader();
         setUpNavigationView();
         if (savedInstanceState == null) {
             loadHomeFragment();
         }
-
-
         setMenuItems();
-
     }
-
-
-    public static void setStats() {
-
-        tbl_user_model user = thi.daoSession.getTbl_user_modelDao().loadAll().get(0);
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_name).setTitle(user.username);
-        int total_docs = 0;
-        int total_docs_synced = 0;
-        int total_docs_un_synced = 0;
-
-       /*tbl_user_modelDao userdao = thi.daoSession.getTbl_user_modelDao();
-        tbl_user_model user = userdao.queryBuilder().where(tbl_user_modelDao.Properties.IsLoggedin.eq(true)).unique();
-
-
-        tbl_qualDao dao =  thi.daoSession.getTbl_qualDao();
-        List<tbl_qual> docsList = dao.queryBuilder().
-                where(
-                        tbl_qualDao.Properties.Branch_id.eq(user.branch_id),
-                        tbl_qualDao.Properties.User_id.eq(user.user_id)
-                ).list();
-
-        total_docs  = docsList.size()-1;
-
-        for (tbl_qual obj:  docsList) {
-            if(!isSynced(obj.android_client_id))
-            {
-                total_docs_un_synced++;
-            }
-            else
-            {
-                total_docs_synced++;
-            }
-        }
-
-        if(total_docs==-1)total_docs=0;
-
-        if(total_docs_un_synced==-1)total_docs_un_synced=0;
-
-        total_docs_synced=(total_docs-total_docs_un_synced);
-
-        if(total_docs_synced==-1)total_docs_synced=0;
-
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_synced).setTitle(total_docs_synced + " synced");
-        menu.findItem(R.id.nav_un_synced).setTitle(total_docs_un_synced + " not synced");
-        menu.findItem(R.id.nav_total).setTitle(total_docs + " total documents");
-
-
-        int numItemsToFetch=0;
-        numItemsToFetch  = thi.daoSession.getTbl_items_to_fetch_from_transferDao().loadAll().size();
-
-        TextView txt_num_items_to_fetch;
-        txt_num_items_to_fetch=(TextView) MenuItemCompat.getActionView(navigationView.getMenu().
-                findItem(R.id.nav_pull_my_transferred_clients));
-
-
-        txt_num_items_to_fetch.setGravity(Gravity.CENTER_VERTICAL);
-        txt_num_items_to_fetch.setTypeface(null, Typeface.BOLD);
-        txt_num_items_to_fetch.setTextColor(activity.getResources().getColor(R.color.colorPrimary));
-        txt_num_items_to_fetch.setText(numItemsToFetch+"");
-        */
-
-    }
-
 
     void setMenuItems() {
         //set the menu items
@@ -207,8 +117,6 @@ public class HomeActivity extends AppCompatActivity implements
             menu.findItem(R.id.nav_logout).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
-
-
                     new AlertDialog.Builder(activity)
                             .setTitle("Confirmation")
                             .setMessage("Do you really want to logout?")
@@ -231,12 +139,9 @@ public class HomeActivity extends AppCompatActivity implements
                     return true;
                 }
             });
-
-
             menu.findItem(R.id.nav_download_tasks).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
-                    pd.showCustomDialog(HomeActivity.this, "fetching tasks...");
                     syncFetchTasks.sync();
                     return true;
                 }
@@ -250,8 +155,6 @@ public class HomeActivity extends AppCompatActivity implements
         super.onStart();
         loadAllTasks();
         setUpNavigationView();
-        setStats();
-
     }
 
     //lod all of my taskss
@@ -263,7 +166,8 @@ public class HomeActivity extends AppCompatActivity implements
             tasks = tdao.queryBuilder().whereOr(
                     tbl_task_modelDao.Properties.Grower_name.like(search_param),
                     tbl_task_modelDao.Properties.Grower_number.like(search_param)
-            ).orderAsc(tbl_task_modelDao.Properties.Grower_name).list();
+            ).orderAsc(tbl_task_modelDao.Properties.Grower_name)
+                    .list();
         } else {
             tasks = tdao.queryBuilder().orderAsc().orderAsc(tbl_task_modelDao.Properties.Grower_name).list();
         }
@@ -282,34 +186,15 @@ public class HomeActivity extends AppCompatActivity implements
         _tasksAdapter = new tasksAdapter(activity, tasks);
         gridView.setAdapter(_tasksAdapter);
         _tasksAdapter.notifyDataSetChanged();
-        setStats();
     }
-
-    private void loadNavHeader() {
-
-
-    }
-
 
     private void loadHomeFragment() {
-        // selecting appropriate nav menu item
         selectNavMenu();
-
-        // set toolbar title
         setToolbarTitle();
-
-        // if user select the current navigation menu again, don't do anything
-        // just close the navigation drawer
         drawer.closeDrawers();
-
-        // Sometimes, when fragment has huge data, screen seems hanging
-        // when switching between navigation menus
-        // So using runnable, the fragment is loaded with cross fade effect
-        // This effect can be seen in GMail app
         Runnable mPendingRunnable = new Runnable() {
             @Override
             public void run() {
-                // update the main content by replacing fragments
                 Fragment fragment = getHomeFragment();
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
@@ -318,43 +203,17 @@ public class HomeActivity extends AppCompatActivity implements
                 fragmentTransaction.commitAllowingStateLoss();
             }
         };
-
-        // If mPendingRunnable is not null, then add to the message queue
         if (mPendingRunnable != null) {
             mHandler.post(mPendingRunnable);
         }
-
-        // show or hide the fab button
-        //toggleFab();
-
-        //Closing drawer on item click
         drawer.closeDrawers();
-
-        // refresh toolbar menu
         invalidateOptionsMenu();
     }
 
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
-         /*   case 0:
-                tasksFragment tFragment          = new tasksFragment();
-                return tFragment;
-            case 1:
-                worksheetFragment pFragment          = new worksheetFragment();
-                return pFragment;
-            case 2:
-                AttachPhotosFragment at  = new AttachPhotosFragment();
-                return at;
-            case 3:
-                MarkLandsFragment lf  = new MarkLandsFragment();
-                return lf;
-            case 4:
-                AboutFragment af  = new AboutFragment();
-                return af;
-                */
             default:
                 return new worksheetFragment();
-
         }
     }
 

@@ -466,30 +466,25 @@ public class worksheetFragment extends Fragment {
         txt_undamaged_3.setText("");
         txt_undamaged_4.setText("");
 
-
         txt_missing_1.setText("");
         txt_missing_2.setText("");
         txt_missing_3.setText("");
         txt_missing_4.setText("");
-
 
         txt_broken_base_1.setText("");
         txt_broken_base_2.setText("");
         txt_broken_base_3.setText("");
         txt_broken_base_4.setText("");
 
-
         txt_broken_half_way_1.setText("");
         txt_broken_half_way_2.setText("");
         txt_broken_half_way_3.setText("");
         txt_broken_half_way_4.setText("");
 
-
         lbl_undamaged_total.setText("0%");
         lbl_missing_total.setText("0%");
         lbl_broken_at_base_total.setText("0%");
         lbl_broken_half_way_total.setText("0%");
-
         txt_remarks.setText("");
     }
 

@@ -67,11 +67,6 @@ public class tbl_grid_header_modelDao extends AbstractDao<tbl_grid_header_model,
                 "\"SIGNATURE_INSPECTOR2\" TEXT," + // 11: signature_inspector2
                 "\"SUBDIVISION_MAP\" TEXT," + // 12: subdivision_map
                 "\"UPLOADED\" INTEGER NOT NULL );"); // 13: uploaded
-        // Add Indexes
-        db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_GRID_HEADER_MODEL_GROWER_ID ON \"TBL_GRID_HEADER_MODEL\"" +
-                " (\"GROWER_ID\" ASC);");
-        db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_GRID_HEADER_MODEL_LAND_ID ON \"TBL_GRID_HEADER_MODEL\"" +
-                " (\"LAND_ID\" ASC);");
     }
 
     /** Drops the underlying database table. */

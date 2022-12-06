@@ -54,4 +54,9 @@
     <string name="year_land">2020-2021</string>
     <string name="draw_subdivision_diagram">Draw sub-division diagram</string>
 
+    <array name="developement_stages">
+        <item>fully grown</item>
+        <item>immature</item>
+    </array>
+
 </resources>

@@ -12,13 +12,10 @@ import org.greenrobot.greendao.annotation.Unique;
 @Entity
 public class tbl_grid_header_model {
 
-    @Id(autoincrement = true) //I totally don't care about value of this field
+    @Id(autoincrement = true)
     public Long id;
-    @Index(unique = true)
     public String grower_id;
-    @Index(unique = true)
     public String land_id;
-
     public String dateOfInspection;
     public String topped;
     public double total_area_of_field_damaged;
