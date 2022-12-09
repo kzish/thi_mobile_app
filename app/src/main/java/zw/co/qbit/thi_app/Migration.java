@@ -35,10 +35,6 @@ public class Migration {
     public static Context context;
 
     public static void dumpData() {
-        Cursor attachments_list = thi.db.rawQuery("", null);
-//        List<tbl_attachments> attachments_list = thi.daoSession.getTbl_attachmentsDao().queryBuilder().where(
-//                tbl_attachmentsDao.Properties.Id.notEq(null)
-//        ).list();
         tbl_attachments[] attachments = thi.daoSession.getTbl_attachmentsDao().loadAll().toArray(new tbl_attachments[0]);
         tbl_grid_header_model[] grid_header_models = thi.daoSession.getTbl_grid_header_modelDao().loadAll().toArray(new tbl_grid_header_model[0]);
         tbl_grower_model[] grower_models = thi.daoSession.getTbl_grower_modelDao().loadAll().toArray(new tbl_grower_model[0]);

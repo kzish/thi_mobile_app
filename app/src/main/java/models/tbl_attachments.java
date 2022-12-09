@@ -17,11 +17,9 @@ public class tbl_attachments {
     public String grower_id;
     public String fileType;
     public boolean isSynced;
-    public boolean isSynced2;
-    @Generated(hash = 924154228)
+    @Generated(hash = 537576304)
     public tbl_attachments(Long id, String filename, String filepath,
-            String land_id, String grower_id, String fileType, boolean isSynced,
-            boolean isSynced2) {
+            String land_id, String grower_id, String fileType, boolean isSynced) {
         this.id = id;
         this.filename = filename;
         this.filepath = filepath;
@@ -29,7 +27,6 @@ public class tbl_attachments {
         this.grower_id = grower_id;
         this.fileType = fileType;
         this.isSynced = isSynced;
-        this.isSynced2 = isSynced2;
     }
     @Generated(hash = 2146524557)
     public tbl_attachments() {
@@ -75,11 +72,5 @@ public class tbl_attachments {
     }
     public void setIsSynced(boolean isSynced) {
         this.isSynced = isSynced;
-    }
-    public boolean getIsSynced2() {
-        return this.isSynced2;
-    }
-    public void setIsSynced2(boolean isSynced2) {
-        this.isSynced2 = isSynced2;
     }
 }
