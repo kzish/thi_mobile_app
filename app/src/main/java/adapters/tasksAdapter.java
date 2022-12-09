@@ -73,7 +73,7 @@ public class tasksAdapter extends BaseAdapter {
             pbar.setBackgroundColor(Color.GREEN);
         }
         if (g.uploaded == 1) {
-            txt_grower_name.setText(g.grower_name +"\nuploaded");
+            txt_grower_name.setText(g.grower_name + "\n(" + g.land_name + ")" + "\nuploaded");
         }
 
         v.setOnClickListener(new View.OnClickListener() {

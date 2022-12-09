@@ -55,11 +55,6 @@ public class tbl_signature_modelDao extends AbstractDao<tbl_signature_model, Lon
                 "\"SECOND_INSPECTOR_NAME\" TEXT," + // 5: second_inspector_name
                 "\"SECOND_INSPECTOR_SIGINATURE_URI\" TEXT," + // 6: second_inspector_siginature_uri
                 "\"DRAW_MAP_URI\" TEXT);"); // 7: draw_map_uri
-        // Add Indexes
-        db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_SIGNATURE_MODEL_GROWER_ID ON \"TBL_SIGNATURE_MODEL\"" +
-                " (\"GROWER_ID\" ASC);");
-        db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_SIGNATURE_MODEL_LAND_ID ON \"TBL_SIGNATURE_MODEL\"" +
-                " (\"LAND_ID\" ASC);");
     }
 
     /** Drops the underlying database table. */

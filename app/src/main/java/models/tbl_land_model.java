@@ -12,12 +12,9 @@ import org.greenrobot.greendao.annotation.Unique;
 
 @Entity
 public class tbl_land_model {
-
-
             @Id
             public String land_id;
             public String land_name;
-            @Index(unique = true)
             public String grower_id;
             public String land_area;
             public String date_planted;

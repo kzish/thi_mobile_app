@@ -1,64 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/view_container"
+    android:background="@drawable/bggauz"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:gravity="bottom"
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/img_header_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/bggauz" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:padding="5dp">
-
-    </LinearLayout>
-
-    <ImageView
+        android:layout_gravity="center_horizontal"
         android:id="@+id/img_profile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/usericon" />
 
     <TextView
+        android:layout_gravity="center_horizontal"
         android:id="@+id/txtname"
         android:layout_width="wrap_content"
-        android:layout_height="40dip"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/muli_semibold_local"
-        android:layout_alignStart="@+id/img_profile"
-        android:layout_marginLeft="2dp"
-        android:padding="4dip"
-
-        android:paddingTop="10dp"
         android:text="THI INSPECTOR APP"
         android:textColor="#fff"
         android:textSize="14dp" />
 
     <TextView
+        android:layout_gravity="center_horizontal"
         android:id="@+id/txtbranch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/img_profile"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/muli_semibold_local"
-        android:padding="4dip"
-        android:text="v2.0.0"
+        android:text="App version v2.0.0"
         android:textColor="#fff"
         android:textSize="12dp" />
-</RelativeLayout>
+
+</LinearLayout>

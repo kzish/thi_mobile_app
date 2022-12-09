@@ -14,17 +14,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b761db-bb1e-4f07-ab60-13dab01a50b9" name="Default Changelist" comment="THI Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/database/MyDaoMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/Migration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/adapters/tasksAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/adapters/tasksAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_grid_header_modelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_grid_header_modelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/gridsheetfragment/worksheetFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/gridsheetfragment/worksheetFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/tbl_grid_header_model.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/tbl_grid_header_model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/syncPackages/syncFetchTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/syncPackages/syncFetchTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/daoModels/DaoMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/daoModels/DaoMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_attachmentsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_attachmentsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_land_modelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_land_modelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_signature_modelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/daoModels/tbl_signature_modelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/database/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/database/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/tbl_attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/tbl_attachments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/tbl_land_model.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/tbl_land_model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/tbl_leaf_model.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/tbl_leaf_model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/tbl_signature_model.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/tbl_signature_model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/syncPackages/UploadInspection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/syncPackages/UploadInspection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/SubDivisionIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/SubDivisionIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sub_division_index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sub_division_index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/thi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/thi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +62,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="thi_mobile_app" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -417,9 +442,9 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/syncPackages/syncFetchTasks.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/zw/co/qbit/thi_app/Migration.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

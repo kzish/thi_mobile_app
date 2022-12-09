@@ -2,7 +2,9 @@ package zw.co.qbit.thi_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.View;
 
@@ -32,65 +34,66 @@ public class SplashActivity extends AppCompatActivity {
 
     CustomProgressDialogOne pd;
     CustomErrorDialog ed;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        txt_username= (BootstrapEditText)findViewById(R.id.txt_username);
-        txt_password= (BootstrapEditText)findViewById(R.id.txt_password);
-        btn_login= (BootstrapButton) findViewById(R.id.btn_login);
-        pd= new CustomProgressDialogOne();
-        ed=new CustomErrorDialog();
+        txt_username = (BootstrapEditText) findViewById(R.id.txt_username);
+        txt_password = (BootstrapEditText) findViewById(R.id.txt_password);
+        btn_login = (BootstrapButton) findViewById(R.id.btn_login);
+        pd = new CustomProgressDialogOne();
+        ed = new CustomErrorDialog();
 
-        List<tbl_user_model> users  = thi.daoSession.getTbl_user_modelDao().loadAll();
-        if(users.size()>0)
-        {
-            startActivity(new Intent(SplashActivity.this,HomeActivity.class));
+        List<tbl_user_model> users = thi.daoSession.getTbl_user_modelDao().loadAll();
+        if (users.size() > 0) {
+            startActivity(new Intent(SplashActivity.this, HomeActivity.class));
             finish();
         }
-
-
     }
 
 
-    public void _login(View v)
-    {
-        if(txt_username.getText().toString().equals("")){txt_username.setError("username");return;}
-        if(txt_password.getText().toString().equals("")){txt_password.setError("password");return;}
+    public void _login(View v) {
+        if (txt_username.getText().toString().equals("")) {
+            txt_username.setError("username");
+            return;
+        }
+        if (txt_password.getText().toString().equals("")) {
+            txt_password.setError("password");
+            return;
+        }
 
-        pd.showCustomDialog(SplashActivity.this,"logging in please wait...");
+        pd.showCustomDialog(SplashActivity.this, "logging in please wait...");
         btn_login.setEnabled(false);
 
         final tbl_user_model user = new tbl_user_model();
-        user.username= txt_username.getText().toString();
-        user.password= txt_password.getText().toString();
-        user.loggedin= "true";
+        user.username = txt_username.getText().toString();
+        user.password = txt_password.getText().toString();
+        user.loggedin = "true";
 
-        Log.e("kz",user.username);
-        Log.e("kz",user.password);
+        Log.e("kz", user.username);
+        Log.e("kz", user.password);
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                globals.server_url+"/mobileapi/login.aspx",
+                globals.server_url + "/mobileapi/login.aspx",
                 new Response.Listener<String>() {
 
                     @Override
                     public void onResponse(String response) {
                         pd.hide();
-                        Log.e("kz","response..........."+response);
+                        Log.e("kz", "response..........." + response);
                         btn_login.setEnabled(true);
-                        if(response.equals("0")) {
+                        if (response.equals("0")) {
 
 
-                            ed.showCustomDialog(SplashActivity.this,"invalid credentials...");
+                            ed.showCustomDialog(SplashActivity.this, "invalid credentials...");
 
 
-                        }
-                        else if(response.equals("1")) {
+                        } else if (response.equals("1")) {
 
                             tbl_user_modelDao userModelDao_ = thi.daoSession.getTbl_user_modelDao();
                             tbl_user_model u = new tbl_user_model();
-                            u.id=1L;
+                            u.id = 1L;
                             u.username = txt_username.getText().toString();
                             u.password = txt_password.getText().toString();
                             u.loggedin = "true";
@@ -100,7 +103,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
                         } else {
-                            ed.showCustomDialog(SplashActivity.this,"generic error...");
+                            ed.showCustomDialog(SplashActivity.this, "generic error...");
                         }
                         btn_login.setEnabled(true);
                         pd.hide();
@@ -111,17 +114,19 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.hide();
-                Log.e("kz","error..........."+error);
-                ed.showCustomDialog(SplashActivity.this,"network error please try again...");
+                Log.e("kz", "error..........." + error);
+                ed.showCustomDialog(SplashActivity.this, "network error please try again...");
                 btn_login.setEnabled(true);
             }
-        }){
+        }) {
             protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
-                Map<String, String> params   = new HashMap<String, String>();
-                params.put("username"        , user.username);
-                params.put("password"        , user.password);
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("username", user.username);
+                params.put("password", user.password);
                 return params;
-            };
+            }
+
+            ;
         };
         strReq.setShouldCache(false);
         AppSingleton.getInstance(thi.CTX).addToRequestQueue(strReq, "login");

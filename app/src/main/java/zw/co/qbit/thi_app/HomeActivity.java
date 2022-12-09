@@ -47,7 +47,6 @@ public class HomeActivity extends AppCompatActivity implements
     public static NavigationView navigationView;
     private DrawerLayout drawer;
     private View navHeader;
-    private ImageView imgNavHeaderBg, imgProfile;
     private TextView txtName, txtBranch;
     private Toolbar toolbar;
     public static tasksAdapter _tasksAdapter;
@@ -82,7 +81,6 @@ public class HomeActivity extends AppCompatActivity implements
 
         activity =  this;
 
-        //ka1();
         gridView = (GridView) findViewById(R.id.gridview);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         txt_search = (BootstrapEditText) findViewById(R.id.txt_search);
@@ -101,8 +99,6 @@ public class HomeActivity extends AppCompatActivity implements
         navHeader = navigationView.getHeaderView(0);
         txtName = (TextView) navHeader.findViewById(R.id.txtname);
         txtBranch = (TextView) navHeader.findViewById(R.id.txtbranch);
-        imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
-        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
         setUpNavigationView();
         if (savedInstanceState == null) {
             loadHomeFragment();
@@ -218,22 +214,17 @@ public class HomeActivity extends AppCompatActivity implements
     }
 
     private void setToolbarTitle() {
-
         try {
 
             getSupportActionBar().setTitle("");
         } catch (Exception ex) {
             Log.e("kz",ex.getMessage()+"kz");
         }
-
-
     }
-
 
     private void selectNavMenu() {
         navigationView.getMenu().getItem(navItemIndex).setChecked(true);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -276,36 +267,24 @@ public class HomeActivity extends AppCompatActivity implements
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                 switch (menuItem.getItemId()) {
-
-
                     default:
                         navItemIndex = 0;
                 }
-
                 if (menuItem.isChecked()) {
                     menuItem.setChecked(false);
                 } else {
                     menuItem.setChecked(true);
                 }
                 menuItem.setChecked(true);
-
                 loadHomeFragment();
-
                 return true;
 
             }
         });
-
-
     }
-
-
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.e("kz", "saint");
-
         return false;
     }
 

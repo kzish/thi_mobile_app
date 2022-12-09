@@ -31,6 +31,7 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
         public final static Property Grower_id = new Property(4, String.class, "grower_id", false, "GROWER_ID");
         public final static Property FileType = new Property(5, String.class, "fileType", false, "FILE_TYPE");
         public final static Property IsSynced = new Property(6, boolean.class, "isSynced", false, "IS_SYNCED");
+        public final static Property IsSynced2 = new Property(7, boolean.class, "isSynced2", false, "IS_SYNCED2");
     }
 
 
@@ -52,7 +53,8 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
                 "\"LAND_ID\" TEXT," + // 3: land_id
                 "\"GROWER_ID\" TEXT," + // 4: grower_id
                 "\"FILE_TYPE\" TEXT," + // 5: fileType
-                "\"IS_SYNCED\" INTEGER NOT NULL );"); // 6: isSynced
+                "\"IS_SYNCED\" INTEGER NOT NULL ," + // 6: isSynced
+                "\"IS_SYNCED2\" INTEGER NOT NULL );"); // 7: isSynced2
     }
 
     /** Drops the underlying database table. */
@@ -95,6 +97,7 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
             stmt.bindString(6, fileType);
         }
         stmt.bindLong(7, entity.getIsSynced() ? 1L: 0L);
+        stmt.bindLong(8, entity.getIsSynced2() ? 1L: 0L);
     }
 
     @Override
@@ -131,6 +134,7 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
             stmt.bindString(6, fileType);
         }
         stmt.bindLong(7, entity.getIsSynced() ? 1L: 0L);
+        stmt.bindLong(8, entity.getIsSynced2() ? 1L: 0L);
     }
 
     @Override
@@ -147,7 +151,8 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // land_id
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // grower_id
             cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // fileType
-            cursor.getShort(offset + 6) != 0 // isSynced
+            cursor.getShort(offset + 6) != 0, // isSynced
+            cursor.getShort(offset + 7) != 0 // isSynced2
         );
         return entity;
     }
@@ -161,6 +166,7 @@ public class tbl_attachmentsDao extends AbstractDao<tbl_attachments, Long> {
         entity.setGrower_id(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
         entity.setFileType(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
         entity.setIsSynced(cursor.getShort(offset + 6) != 0);
+        entity.setIsSynced2(cursor.getShort(offset + 7) != 0);
      }
     
     @Override

@@ -13,11 +13,8 @@ import org.greenrobot.greendao.annotation.Index;
 public class tbl_signature_model {
             @Id(autoincrement = true) //I totally don't care about value of this field
             public Long id;//local id here on the phone
-            @Index(unique = true)
             public String grower_id;
-            @Index(unique = true)
             public String land_id;
-
             public String grower_signature_uri;
             public String inspector_signature_uri;
             public String second_inspector_name;

@@ -13,6 +13,7 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.util.ArrayList;
 
+import zw.co.qbit.thi_app.Migration;
 import zw.co.qbit.thi_app.thi;
 
 
@@ -23,7 +24,7 @@ import zw.co.qbit.thi_app.thi;
 public class DBHelper extends SQLiteOpenHelper {
 
 
-    private static final int DATABASE_VERSION = 32;
+    private static final int DATABASE_VERSION = 32; //33
     private static final String DATABASE_NAME = "thi";
     private static String TAG="DBHELPER";
 
@@ -39,13 +40,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        Log.e("kz-DBHelper","oncreate db called");
+        //migrations in green dao
     }
 
-    // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        Log.e("kz-DBHelper","onupgrade db called");
+        //migrations in green dao
     }
 
     @Override

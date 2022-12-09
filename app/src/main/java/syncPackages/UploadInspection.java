@@ -64,16 +64,17 @@ public class UploadInspection {
                     message = "User is null";
                     return message;
                 }
+                //TODO: send the signatures uncomment below
                 tbl_signature_model sig = thi.daoSession.getTbl_signature_modelDao()
                         .queryBuilder()
                         .where(
                                 tbl_signature_modelDao.Properties.Land_id.eq(task.land_id),
                                 tbl_signature_modelDao.Properties.Grower_id.eq(task.grower_id)
                         ).unique();
-                if (sig == null) {
-                    message = "Signature is empty";
-                    return message;
-                }
+//                if (sig == null) {
+//                    message = "Signature is empty";
+//                    return message;
+//                }
 
                 List<tbl_worksheet_model> myworksheets = thi.daoSession.getTbl_worksheet_modelDao()
                         .queryBuilder()

@@ -65,9 +65,6 @@ public class tbl_land_modelDao extends AbstractDao<tbl_land_model, String> {
                 "\"BOUNDARY_COORDINATES\" TEXT," + // 10: boundaryCoordinates
                 "\"SCANNED_IMAGE\" TEXT," + // 11: scannedImage
                 "\"IS_SYNCED\" INTEGER NOT NULL );"); // 12: isSynced
-        // Add Indexes
-        db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_TBL_LAND_MODEL_GROWER_ID ON \"TBL_LAND_MODEL\"" +
-                " (\"GROWER_ID\" ASC);");
     }
 
     /** Drops the underlying database table. */

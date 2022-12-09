@@ -4,7 +4,7 @@ apply plugin: 'org.greenrobot.greendao' // apply plugin
 greendao {
     daoPackage 'daoModels'
     targetGenDir 'src/main/java'
-    schemaVersion 30
+    schemaVersion 55
 }
 
 

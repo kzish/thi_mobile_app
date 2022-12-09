@@ -17,7 +17,6 @@ public class tbl_leaf_model {
     @Id(autoincrement = true)
     public Long id;
     public int worksheet_id;//link this grid to the worksheet
-    //@Index(unique = true)
     public int subdivision, grower_id, land_id, batch_id, plant_id, leaf_number;
     public String percentage_damage;
     public int uploaded;
